@@ -1,0 +1,232 @@
+from fastapi import FastAPI, File, UploadFile, BackgroundTasks, HTTPException, Form
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+import shutil, os, subprocess, json, sys
+from pathlib import Path
+
+# Try to load .env file if python-dotenv is available.
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, that's okay.
+
+app = FastAPI()
+BASE_DIR = Path(__file__).parent
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, specify your frontend domain.
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/")
+async def read_root():
+    """Serve the index.html file at the root path."""
+    index_path = BASE_DIR / "index.html"
+    if not index_path.exists():
+        raise HTTPException(status_code=404, detail="index.html not found")
+    return FileResponse(index_path)
+
+@app.post("/ingest/")
+async def ingest(file: UploadFile = File(...)):
+    dst = BASE_DIR / file.filename
+    with open(dst, "wb") as f:
+        shutil.copyfileobj(file.file, f)
+    # In production: push to cloud storage, emit a job to queue.
+    return {"status":"uploaded","filename":file.filename}
+
+@app.post("/process/")
+async def process(filename: str = Form(...), background: BackgroundTasks = BackgroundTasks()):
+    """
+    Full processing pipeline for an uploaded media file.
+
+    Optimizations for latency:
+    - Do audio extraction + transcription synchronously (so the user gets the transcript quickly).
+    - Run task extraction in a FastAPI BackgroundTask so we don't block the response.
+    """
+    filepath = BASE_DIR / filename
+    if not filepath.exists():
+        return {"status":"processing_failed", "error":"File not found"}
+    audio_path = BASE_DIR / "audio.wav"
+    transcript_path = BASE_DIR / "transcript.json"
+    
+    # Delete old transcript if it exists
+    if transcript_path.exists():
+        transcript_path.unlink()
+    
+    try:
+        # extract audio
+        ffmpeg_result = subprocess.run(
+            ["ffmpeg","-y","-i", str(filepath), "-vn","-acodec","pcm_s16le","-ar","16000","-ac","1", str(audio_path)], 
+            check=False,
+            capture_output=True,
+            text=True
+        )
+        if ffmpeg_result.returncode != 0:
+            return {"status":"processing_failed", "error":f"Audio extraction failed: {ffmpeg_result.stderr[:200]}"}
+        
+        # transcribe (calls script)
+        transcribe_script = BASE_DIR / "scripts" / "transcribe.py"
+        # Ensure environment variables are passed to subprocess and use the same Python interpreter
+        # Use "base" model for better accuracy (GPU can handle it efficiently)
+        env = os.environ.copy()
+        transcribe_result = subprocess.run(
+            [sys.executable, str(transcribe_script), str(audio_path), "--model", "base"], 
+            check=False,
+            capture_output=True,
+            text=True,
+            cwd=str(BASE_DIR),
+            env=env  # Pass environment variables explicitly
+        )
+        if transcribe_result.returncode != 0:
+            # Transcription failed, ensure transcript.json doesn't exist
+            if transcript_path.exists():
+                transcript_path.unlink()
+            # Combine both stdout and stderr for better error messages
+            error_msg = ""
+            if transcribe_result.stderr:
+                error_msg += f"STDERR: {transcribe_result.stderr}"
+            if transcribe_result.stdout:
+                error_msg += f" STDOUT: {transcribe_result.stdout}"
+            if not error_msg:
+                error_msg = "Unknown error"
+            
+            # Check if API key is set
+            api_key_set = bool(os.environ.get("OPENAI_API_KEY"))
+            whisper_installed = False
+            try:
+                import whisper
+                whisper_installed = True
+            except:
+                pass
+            
+            return {
+                "status":"processing_failed", 
+                "error":f"Transcription failed: {error_msg[:800]}. API Key Set: {api_key_set}, Whisper Installed: {whisper_installed}"
+            }
+        
+        # Verify transcript was created
+        if not transcript_path.exists(): 
+            return {"status":"processing_failed", "error":"Transcription completed but transcript file was not created"}
+        
+        # Extract tasks in a background task so we don't block /process latency.
+        # This means the transcript becomes available first, and tasks.json shortly after.
+        def run_extract_tasks():
+            extract_script = BASE_DIR / "scripts" / "extract_tasks.py"
+            try:
+                env = os.environ.copy()
+                result = subprocess.run(
+                    [sys.executable, str(extract_script), "transcript.json", "--meeting_date", "2025-12-01"],
+                    check=False,
+                    cwd=str(BASE_DIR),
+                    env=env,
+                    capture_output=True,
+                    text=True
+                )
+                if result.returncode != 0:
+                    print(f"Task extraction failed: {result.stderr}", file=sys.stderr)
+                else:
+                    print(f"Task extraction completed successfully", file=sys.stdout)
+            except Exception as e:
+                print(f"Task extraction error: {str(e)}", file=sys.stderr)
+
+        background.add_task(run_extract_tasks)
+        
+        return {"status":"processing_completed"}
+    except Exception as e:
+        return {"status":"processing_failed", "error":f"Processing error: {str(e)}"}
+
+@app.get("/health")
+def health():
+    return {"status":"ok"}
+
+@app.get("/config/")
+def get_config():
+    """Check configuration status."""
+    has_whisper = False
+    cuda_available = False
+    gpu_name = None
+    try:
+        import whisper
+        has_whisper = True
+    except ImportError:
+        pass
+    
+    try:
+        import torch
+        cuda_available = torch.cuda.is_available()
+        if cuda_available:
+            gpu_name = torch.cuda.get_device_name(0)
+    except ImportError:
+        pass
+    
+    has_openai_key = bool(os.environ.get("OPENAI_API_KEY"))
+    
+    return {
+        "whisper_installed": has_whisper,
+        "openai_api_key_set": has_openai_key,
+        "transcription_available": has_whisper or has_openai_key,
+        "cuda_available": cuda_available,
+        "gpu_name": gpu_name,
+        "message": "Ready for transcription" if (has_whisper or has_openai_key) else "No transcription method available. Install Whisper or set OPENAI_API_KEY"
+    }
+
+@app.get("/transcript/")
+def get_transcript():
+    """Retrieve the generated transcript."""
+    transcript_path = BASE_DIR / "transcript.json"
+    if not transcript_path.exists():
+        return {"status": "not_ready", "transcript": None}
+    
+    try:
+        with open(transcript_path, "r", encoding="utf-8") as f:
+            transcript = json.load(f)
+    except json.JSONDecodeError as e:
+        return {"status": "error", "transcript": None, "error": f"Invalid transcript file: {str(e)}"}
+    except Exception as e:
+        return {"status": "error", "transcript": None, "error": f"Error reading transcript: {str(e)}"}
+    
+    # Validate transcript structure
+    if not isinstance(transcript, list):
+        return {"status": "error", "transcript": None, "error": f"Invalid transcript format: expected a list, got {type(transcript).__name__}"}
+    
+    if len(transcript) == 0:
+        return {"status": "error", "transcript": None, "error": "Transcript is empty"}
+
+    for i, seg in enumerate(transcript):
+        if not isinstance(seg, dict):
+            return {"status": "error", "transcript": None, "error": f"Invalid segment at index {i}: expected dict, got {type(seg).__name__}"}
+        if "text" not in seg:
+            return {"status": "error", "transcript": None, "error": f"Segment at index {i} missing 'text' field"}
+        if "start" not in seg:
+            seg["start"] = 0.0
+        if "end" not in seg:
+            seg["end"] = 0.0
+    
+    
+    dummy_texts = [
+        "We need to create onboarding mockups by next Monday.",
+        "Sanya will take that.",
+        "Also, backend should add analytics events."
+    ]
+    if len(transcript) == 3:
+        transcript_texts = [seg.get("text", "") for seg in transcript if isinstance(seg, dict)]
+        if all(any(dummy_text in txt for txt in transcript_texts) for dummy_text in dummy_texts):
+            # This is dummy data, return error
+            return {"status": "error", "transcript": None, "error": "Transcription failed. Options: 1) Install Whisper: pip install -U openai-whisper, or 2) Set OPENAI_API_KEY environment variable to use OpenAI API"}
+    
+    return {"status": "ready", "transcript": transcript}
+
+@app.get("/tasks/")
+def get_tasks():
+    """Retrieve the extracted tasks."""
+    tasks_path = BASE_DIR / "tasks.json"
+    if not tasks_path.exists():
+        raise HTTPException(status_code=404, detail="Tasks not found. Please process a file first.")
+    with open(tasks_path, "r") as f:
+        tasks = json.load(f)
+    return {"tasks": tasks}

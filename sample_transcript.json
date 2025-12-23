@@ -1,0 +1,17 @@
+[
+  {
+    "start": 0.0,
+    "end": 5.0,
+    "text": "We need to create onboarding mockups by next Monday."
+  },
+  {
+    "start": 5.1,
+    "end": 9.0,
+    "text": "Sanya will take that."
+  },
+  {
+    "start": 9.1,
+    "end": 15.0,
+    "text": "Also, backend should add analytics events."
+  }
+]
