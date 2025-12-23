@@ -3,9 +3,6 @@ uvicorn[standard]
 requests
 python-multipart
 pydantic
-tqdm
 openai
-openai-whisper
 python-dotenv
 google-generativeai
-
