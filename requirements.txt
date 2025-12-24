@@ -1,8 +1,10 @@
-fastapi
-uvicorn[standard]
+﻿fastapi
+uvicorn
 requests
 python-multipart
 pydantic
 openai
 python-dotenv
 google-generativeai
+protobuf<5.0.0
+grpcio-status
