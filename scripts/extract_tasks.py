@@ -3,15 +3,33 @@
 # Falls back to OpenAI GPT-4o-mini if GEMINI_API_KEY not set.
 import argparse, os, json, time, sys
 
-PROMPT_TEMPLATE = '''You are an assistant that extracts and prioritizes **only meaningful, actionable tasks** from a meeting.
+PROMPT_TEMPLATE = '''You are an expert AI meeting assistant.
+Your goal is to extract **meaningful, actionable tasks** from the meeting transcript below.
 
-You are given transcript segments (each with start, end, and text).
-Your job is to:
-- Ignore chit-chat, comments, filler, and anything that is NOT a clear action someone should take.
-- For each true action item, reconstruct a **full, natural sentence** even if the raw transcript is fragmented or partially captured.
-- Use nearby context from the meeting (previous/next utterances) to complete the task sentence when needed.
+CRITICAL INSTRUCTIONS:
+1.  **Synthesize, Don't Quote**: Do NOT just copy lines from the transcript. You must **rewrite** each task into a clear, standalone, professional sentence.
+    *   BAD: "can you restart the server"
+    *   GOOD: "Devin needs to restart the production server to resolve the latency issue."
+2.  **Context is King**: Use surrounding context (who said what, what came before/after) to understand the full task, even if it was spoken in fragments.
+3.  **Be Definitive**: The "text" field should be a complete instruction that someone can understand without reading the meeting notes.
+    *   BAD: "bending items"
+    *   GOOD: "Warehouse team must organize the bending items by EOD."
+4.  **Ignore Noise**: Ignore future tense discussions ("we might do X") unless it is a firm decision. Ignore questions meant for discussion. Only capture agreed-upon actions.
+5.  **Filter Aggressively**: If a transcript line is "Okay. I will give you. Yeah.", IGNORE IT. Only extract tasks with a clear VERB and OBJECT.
 
-Return ONLY a JSON array. Do NOT include any explanation, comments, or extra keys.
+Return ONLY a valid JSON array of objects.
+Each object MUST have:
+- "text": (string) A full, definitive sentence describing the task.
+- "assignee": (string or null) Who is responsible?
+- "role": (string or null) Their role (e.g. "Engineer", "Designer").
+- "deadline": (string YYYY-MM-DD or null) Date if mentioned.
+- "priority": (string) "High", "Medium", or "Low".
+- "confidence": (float) 0.0 to 1.0.
+
+Consistency Rules:
+- If a specific person is mentioned (e.g. "Sanya"), put them in "assignee".
+- If a deadline is mentioned ("next Friday"), calculate the date or put "Next Friday" in deadline.
+- Default priority is "Medium".
 Each item in the array MUST have:
 - "text": a single, clear, complete sentence describing the task (e.g. "We need to research how the founders started the business.")
 - "assignee": name or email if mentioned, else null
@@ -108,45 +126,24 @@ def call_openai_fallback(prompt, model="gpt-4o-mini"):
         raise RuntimeError(f"OpenAI API call failed: {str(e)}")
 
 
-def trim_segments_for_prompt(segments, max_chars=20000):
+def trim_segments_for_prompt(segments, max_chars=500000):
     """
-    Reduce prompt size for latency/cost:
-    - Prefer segments that are likely to contain actions (simple keyword heuristic).
-    - Always enforce a hard character cap so the prompt stays bounded.
+    PASS THROUGH FULL CONTEXT (Optimize for quality over token savings).
+    Modern LLMs (Gemini 1.5, GPT-4o) have huge context windows.
+    We only trim if it exceeds an massive limit (500k chars ~ 125k tokens).
     """
-    action_keywords = [
-        'need', 'please', 'can you', 'could you', 'would you',
-        'will ', 'we will', 'i will', 'we should', 'should ', 'must',
-        'assign', "let's", 'todo', 'follow up', 'take care of', 'make sure',
-        'remember to', 'ensure', 'schedule', 'plan', 'prepare', 'send', 'share'
-    ]
-
-    def looks_actiony(txt: str) -> bool:
-        lower = txt.lower()
-        return any(k in lower for k in action_keywords)
-
-    prioritized = [s for s in segments if looks_actiony(s.get('text', ''))]
-    if not prioritized:
-        prioritized = list(segments)  # fallback: use everything
-
-    # If the prioritized text is very long, downsample roughly evenly across the meeting
-    est_total_chars = sum(len(s.get('text', '')) for s in prioritized)
-    if est_total_chars > max_chars * 1.5 and len(prioritized) > 0:
-        avg_len = max(1, est_total_chars // len(prioritized))
-        approx_segments = max(1, max_chars // avg_len)
-        step = max(1, len(prioritized) // approx_segments)
-        prioritized = [s for idx, s in enumerate(prioritized) if idx % step == 0]
-
-    trimmed = []
     total = 0
-    for s in prioritized:
+    trimmed = []
+    
+    # Simple pass-through up to limit
+    for s in segments:
         txt = s.get('text', '')
-        # conservative estimate: include JSON overhead
-        est_len = len(txt) + 100
+        est_len = len(txt) + 50 # minimal overhead
         if total + est_len > max_chars:
             break
         trimmed.append(s)
         total += est_len
+        
     return trimmed
 
 
@@ -245,14 +242,17 @@ if __name__ == "__main__":
         print(f"Successfully parsed {len(tasks)} tasks", file=sys.stdout)
 
         # If the model returned an empty list, fall back to heuristic extraction
+        # If the model returned an empty list, DO NOT fall back to heuristic extraction.
+        # Heuristics generate noise (e.g. "I will give you"). Better to return 0 tasks.
         if not tasks:
-            print("Model returned empty task list; falling back to heuristic extraction.", file=sys.stderr)
-            tasks = build_heuristic_tasks(segments)
+            print("Model returned empty task list.", file=sys.stderr)
+            tasks = []
     except Exception as e:
         print(f"LLM API call failed or parsing failed: {e}", file=sys.stderr)
         print(f"Response was: {out[:500] if 'out' in locals() else 'N/A'}", file=sys.stderr)
-        print("Falling back to heuristic extraction.", file=sys.stderr)
-        tasks = build_heuristic_tasks(segments)
+        # DISABLE heuristic fallback to avoid bad tasks
+        print("Returning empty task list to avoid noise.", file=sys.stderr)
+        tasks = []
     
     # Always write tasks.json, even if empty
     tasks_path = os.path.abspath('tasks.json')

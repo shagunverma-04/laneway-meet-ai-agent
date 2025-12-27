@@ -1,487 +1,201 @@
 [
   {
-    "text": "Yes, sir. So guys, how to check their, Sangha, please have to check their company details. Also, the lane we call help them, they are not having a good social media service.",
+    "text": "Okay. I will give you. Yeah.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 58.0,
-      "end": 62.0,
-      "text": " So guys, how to check their, Sangha, please have to check their company details."
+      "start": 23.0,
+      "end": 24.0,
+      "text": " I will give you."
     }
   },
   {
-    "text": "If I, if plainway understand, okay, this is very good brand, but it is underrated because of marketing. Then we will give our full power. We will give our full efficiency to make their brand better.",
+    "text": "Then the rest is like that. Sir, can you help me? Yes, yes, yes.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 106.0,
-      "end": 109.0,
-      "text": " Then we will give our full power."
+      "start": 38.0,
+      "end": 41.0,
+      "text": " Sir, can you help me?"
     }
   },
   {
-    "text": "Then we will give our full power. We will give our full efficiency to make their brand better. Because the smash, the game, it's going to make sense.",
+    "text": "So it's presented on Illimaish, you know, they said I did. So here actually a fine off-boarding, uh, of wording document for, uh, web development. Something like that also.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 109.0,
-      "end": 113.0,
-      "text": " We will give our full efficiency to make their brand better."
+      "start": 51.0,
+      "end": 58.0,
+      "text": " So here actually a fine off-boarding, uh, of wording document for, uh, web development."
     }
   },
   {
-    "text": "What are the things, if they, if they want to do when they are going into FMBG, I mean, food and safety or supplement products, what all license they need? Are they following all these Indian standards?",
+    "text": "Oh, okay. The elements should be in a different, uh, Tom or any worry and say white color. Yes, sir.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 143.0,
+      "start": 61.0,
+      "end": 69.0,
+      "text": " The elements should be in a different, uh, Tom or any worry and say white color."
+    }
+  },
+  {
+    "text": "Uh, bending items. I say, need. No.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 137.0,
+      "end": 138.0,
+      "text": " I say, need."
+    }
+  },
+  {
+    "text": "And this one, sir, actually, uh, for website. I asked, you, and it sure will like. I'll just.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 147.0,
       "end": 150.0,
-      "text": " I mean, food and safety or supplement products, what all license they need?"
+      "text": " I asked, you, and it sure will like."
     }
   },
   {
-    "text": "then there is no use of our company for the long term, isn't it? Our client will also get issues, did we? So once we are selecting a client, we should be knowing all the background.",
+    "text": "Yeah, host. So yeah, finally website files, design files, source code backup files training marketing.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 163.0,
-      "end": 166.0,
-      "text": " Our client will also get issues, did we?"
+      "start": 153.0,
+      "end": 157.0,
+      "text": " So yeah, finally website files, design files,"
     }
   },
   {
-    "text": "Our client will also get issues, did we? So once we are selecting a client, we should be knowing all the background. Then we will be their full catalyst for their growth.",
+    "text": "Uh, there are few more data. So I mean, I should know you have to check with. Uh, uh, uh, press.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 166.0,
+      "start": 167.0,
       "end": 170.0,
-      "text": " So once we are selecting a client, we should be knowing all the background."
+      "text": " So I mean, I should know you have to check with."
     }
   },
   {
-    "text": "So once we are selecting a client, we should be knowing all the background. Then we will be their full catalyst for their growth. Can I clear?",
+    "text": "Uh, hosting a account, Gmail account. So all these account details we need to share. So, uh, hosting access.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 170.0,
-      "end": 173.0,
-      "text": " Then we will be their full catalyst for their growth."
+      "start": 179.0,
+      "end": 182.0,
+      "text": " So all these account details we need to share."
     }
   },
   {
-    "text": "Yes, sir. That is what, now we have to research about this particular client. Then we will send a mail regarding, okay, this is what we saw.",
+    "text": "Hmm, password. You said everything we should give you. Said that.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 175.0,
-      "end": 178.0,
-      "text": " That is what, now we have to research about this particular client."
+      "start": 204.0,
+      "end": 205.0,
+      "text": " You said everything we should give you."
     }
   },
   {
-    "text": "That is what, now we have to research about this particular client. Then we will send a mail regarding, okay, this is what we saw. In your things and all we understand that, these are the price ranges.",
+    "text": "The history email was the registry. So it's very details with the link you will be sharing and hosting. Hosting.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 178.0,
-      "end": 181.0,
-      "text": " Then we will send a mail regarding, okay, this is what we saw."
+      "start": 268.0,
+      "end": 275.0,
+      "text": " So it's very details with the link you will be sharing and hosting."
     }
   },
   {
-    "text": "So, now, Jagan, Sangal, you guys have to, normal also you have to, have to do the researching of the price computations. Get me.",
+    "text": "So these are only points. It should be there also. In this.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 189.0,
-      "end": 193.0,
-      "text": " have to do the researching of the price computations."
+      "start": 308.0,
+      "end": 310.0,
+      "text": " It should be there also."
     }
   },
   {
-    "text": "Not for this one, for basically you have collected all the data. Yeah, that we will sit. Okay.",
+    "text": "Yeah. It should be closed. This.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 205.0,
-      "end": 207.0,
-      "text": " Yeah, that we will sit."
+      "start": 333.0,
+      "end": 334.0,
+      "text": " It should be closed."
     }
   },
   {
-    "text": "Okay. When we can join, we will take each and every people thing. So, now, what you guys have to be part of this is, that is what I am telling you.",
+    "text": "No, sir. Should I. I don't know.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 209.0,
-      "end": 212.0,
-      "text": " When we can join, we will take each and every people thing."
+      "start": 404.0,
+      "end": 405.0,
+      "text": " Should I."
     }
   },
   {
-    "text": "Cool. So, now, you have to research about this. Because we have to find out who is the owner, CEO, whatever the deal,",
+    "text": "Feedback. Here we need to give that our email. Google drive.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 224.0,
-      "end": 227.0,
-      "text": " So, now, you have to research about this."
+      "start": 427.0,
+      "end": 429.0,
+      "text": " Here we need to give that our email."
     }
   },
   {
-    "text": "Did me. I need to connect with the founder only. I need to connect with the management team.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 243.0,
-      "end": 244.0,
-      "text": " I need to connect with the founder only."
-    }
-  },
-  {
-    "text": "I need to connect with the founder only. I need to connect with the management team. Then only we can move forward.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 244.0,
-      "end": 246.0,
-      "text": " I need to connect with the management team."
-    }
-  },
-  {
-    "text": "If you are finding one or two people, not the right person. Always, we will do business with Mugasambani only, not with the other managers. I am clear.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 253.0,
-      "end": 257.0,
-      "text": " Always, we will do business with Mugasambani only, not with the other managers."
-    }
-  },
-  {
-    "text": "Yeah. You should do business with Mugasambani. Why we have to do with another people?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 260.0,
-      "end": 262.0,
-      "text": " You should do business with Mugasambani."
-    }
-  },
-  {
-    "text": "So, then we can consult them. If you know, they will also be surprised. How do you understand all these things?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 277.0,
-      "end": 279.0,
-      "text": " If you know, they will also be surprised."
-    }
-  },
-  {
-    "text": "How do you understand all these things? They will think, okay, how do you understand? Why do you have to say this?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 282.0,
-      "end": 285.0,
-      "text": " They will think, okay, how do you understand?"
-    }
-  },
-  {
-    "text": "Yes. That's the brand, that's the brand, ability of customer retention, which should be doing. Did me.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 295.0,
-      "end": 301.0,
-      "text": " That's the brand, that's the brand, ability of customer retention, which should be doing."
-    }
-  },
-  {
-    "text": "We can do a lot of things. We will say, okay, our team member is also there. We will do it with our team.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 315.0,
-      "end": 317.0,
-      "text": " We will say, okay, our team member is also there."
-    }
-  },
-  {
-    "text": "We will say, okay, our team member is also there. We will do it with our team. So, a lot of opportunities are there.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 317.0,
-      "end": 319.0,
-      "text": " We will do it with our team."
-    }
-  },
-  {
-    "text": "We can do this very clearly. But these are the steps we need to find out. So, again, normal, sungal, and there is only a note down these points.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 327.0,
-      "end": 330.0,
-      "text": " But these are the steps we need to find out."
-    }
-  },
-  {
-    "text": "So, again, normal, sungal, and there is only a note down these points. And take the next steps. Sure, sir.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 335.0,
-      "end": 337.0,
-      "text": " And take the next steps."
-    }
-  },
-  {
-    "text": "Yes. After we get, we will connect them with them for the Instagram. For the website is cool already.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 342.0,
-      "end": 345.0,
-      "text": " After we get, we will connect them with them for the Instagram."
-    }
-  },
-  {
-    "text": "How they are going to influence other people? What are the influence of marketing they are planning to do? What are the campaigns they are planning to do?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 357.0,
-      "end": 360.0,
-      "text": " What are the influence of marketing they are planning to do?"
-    }
-  },
-  {
-    "text": "What are the influence of marketing they are planning to do? What are the campaigns they are planning to do? So, how much budget they have?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 360.0,
-      "end": 362.0,
-      "text": " What are the campaigns they are planning to do?"
-    }
-  },
-  {
-    "text": "So, how much budget they have? So, from their budget, we will... I mean, before that itself, we will give...",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 364.0,
-      "end": 366.0,
-      "text": " So, from their budget, we will..."
-    }
-  },
-  {
-    "text": "So, from their budget, we will... I mean, before that itself, we will give... In the mail itself, we will tell...",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 366.0,
-      "end": 368.0,
-      "text": " I mean, before that itself, we will give..."
-    }
-  },
-  {
-    "text": "I mean, before that itself, we will give... In the mail itself, we will tell... Okay, one week of time, we will give a set trial period for you guys to see.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 368.0,
-      "end": 369.0,
-      "text": " In the mail itself, we will tell..."
-    }
-  },
-  {
-    "text": "In the mail itself, we will tell... Okay, one week of time, we will give a set trial period for you guys to see. We will write blogs, we will write videos, we will edit some videos,",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 369.0,
-      "end": 373.0,
-      "text": " Okay, one week of time, we will give a set trial period for you guys to see."
-    }
-  },
-  {
-    "text": "Okay, one week of time, we will give a set trial period for you guys to see. We will write blogs, we will write videos, we will edit some videos, suggestion for you.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 373.0,
-      "end": 377.0,
-      "text": " We will write blogs, we will write videos, we will edit some videos,"
-    }
-  },
-  {
-    "text": "suggestion for you. We will run an ads for you. You can see how much we are giving back.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 378.0,
-      "end": 380.0,
-      "text": " We will run an ads for you."
-    }
-  },
-  {
-    "text": "Right, sir. We will give a one week of trial free services to them. So, do we have video editors in our team?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 384.0,
-      "end": 387.0,
-      "text": " We will give a one week of trial free services to them."
-    }
-  },
-  {
-    "text": "Did we? Once they start working with bigger, bigger clients, we will... I improve our team much better.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 411.0,
-      "end": 414.0,
-      "text": " Once they start working with bigger, bigger clients, we will..."
-    }
-  },
-  {
-    "text": "Don't worry. We will do... We will have international standard people with us.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 419.0,
-      "end": 420.0,
-      "text": " We will do..."
-    }
-  },
-  {
-    "text": "We will do... We will have international standard people with us. Now, see, we are hiring an international Singapore girl.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 420.0,
-      "end": 422.0,
-      "text": " We will have international standard people with us."
-    }
-  },
-  {
-    "text": "So, from Singapore market also, we can get some clients or maybe some other plans, strategies we can create. So, great.",
+    "text": "In offboarding. Want to give the feedback because it will become more. Hetic.",
     "assignee": null,
     "role": null,
     "deadline": null,
@@ -490,89 +204,24 @@
     "source_segment": {
       "start": 438.0,
       "end": 441.0,
-      "text": " plans, strategies we can create."
+      "text": " Want to give the feedback because it will become more."
     }
   },
   {
-    "text": "This core team. This core team should understand what we are doing. What we are planning to do.",
+    "text": "And we can just add the link there and in the. PNG format or I'll do something and I'll share it to you by today. Sure.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 447.0,
-      "end": 449.0,
-      "text": " This core team should understand what we are doing."
+      "start": 450.0,
+      "end": 455.0,
+      "text": " PNG format or I'll do something and I'll share it to you by today."
     }
   },
   {
-    "text": "This core team should understand what we are doing. What we are planning to do. So, Jagan, you have to be part of this.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 449.0,
-      "end": 450.0,
-      "text": " What we are planning to do."
-    }
-  },
-  {
-    "text": "And you are that... I mean, distant TikTok should be ready. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 455.0,
-      "end": 458.0,
-      "text": " I mean, distant TikTok should be ready."
-    }
-  },
-  {
-    "text": "Because the client is not asking for that right now. But the client will ask one day. So, that time, I will come back to you.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 462.0,
-      "end": 464.0,
-      "text": " But the client will ask one day."
-    }
-  },
-  {
-    "text": "But the client will ask one day. So, that time, I will come back to you. So, that time, all the teams should be ready.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 464.0,
-      "end": 466.0,
-      "text": " So, that time, I will come back to you."
-    }
-  },
-  {
-    "text": "So, that time, I will come back to you. So, that time, all the teams should be ready. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 466.0,
-      "end": 469.0,
-      "text": " So, that time, all the teams should be ready."
-    }
-  },
-  {
-    "text": "I have to do that. No, it will be delaying for the process. Did we?",
+    "text": "Yes, sir. We need to have more contract like this. They need.",
     "assignee": null,
     "role": null,
     "deadline": null,
@@ -580,12 +229,25 @@
     "confidence": 0.6,
     "source_segment": {
       "start": 474.0,
-      "end": 476.0,
-      "text": " No, it will be delaying for the process."
+      "end": 478.0,
+      "text": " We need to have more contract like this."
     }
   },
   {
-    "text": "So, our team... Our team should have keeping all the data. That is why we are telling you to upload and report the details properly in the",
+    "text": "We need to have more contract like this. They need. We need to work on a lot of things.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 478.0,
+      "end": 479.0,
+      "text": " They need."
+    }
+  },
+  {
+    "text": "They need. We need to work on a lot of things. Lot of clients.",
     "assignee": null,
     "role": null,
     "deadline": null,
@@ -594,128 +256,245 @@
     "source_segment": {
       "start": 479.0,
       "end": 481.0,
-      "text": " Our team should have keeping all the data."
+      "text": " We need to work on a lot of things."
     }
   },
   {
-    "text": "worksheet. So, that next day, when you check back, you will understand this is how you have to work. This is what you drink down that day.",
+    "text": "One more 7, 0 media. We need one more letter. Yes, sir.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 487.0,
-      "end": 490.0,
-      "text": " So, that next day, when you check back, you will understand this is how you have to work."
+      "start": 512.0,
+      "end": 514.0,
+      "text": " We need one more letter."
     }
   },
   {
-    "text": "This is what you drink down that day. So, everything will have a coordination and a management. It will meet.",
+    "text": "This was I was working on. I saw the documents and this is offboarding today. I'll do it by Sunday.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 492.0,
-      "end": 495.0,
-      "text": " So, everything will have a coordination and a management."
+      "start": 518.0,
+      "end": 523.0,
+      "text": " I saw the documents and this is offboarding today."
     }
   },
   {
-    "text": "So, everything will have a coordination and a management. It will meet. So, management using A, that is very important here.",
+    "text": "One more thing. You know, offboarding document we'll be giving. I want the passwords details link everything.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 495.0,
-      "end": 496.0,
-      "text": " It will meet."
-    }
-  },
-  {
-    "text": "So, in the last meeting, we were discussing about much more things. How we are planning to do A. So, right now, money is...",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 502.0,
-      "end": 504.0,
-      "text": " How we are planning to do A."
-    }
-  },
-  {
-    "text": "Okay. So, you have to take all the data and tell them that, okay, this is what we are planning to do. So, we are planning to give a one week of trial.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 534.0,
+      "start": 535.0,
       "end": 538.0,
-      "text": " So, you have to take all the data and tell them that, okay, this is what we are planning to do."
+      "text": " You know, offboarding document we'll be giving."
     }
   },
   {
-    "text": "So, you have to take all the data and tell them that, okay, this is what we are planning to do. So, we are planning to give a one week of trial. What all the services we have to be provided in that one week, did we?",
+    "text": "Sorry. Like the document can I make it encrypted because. You're going password.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 538.0,
-      "end": 541.0,
-      "text": " So, we are planning to give a one week of trial."
+      "start": 546.0,
+      "end": 550.0,
+      "text": " Like the document can I make it encrypted because."
     }
   },
   {
-    "text": "So, it's so much fun. You will be coming there tomorrow, isn't it, Naviti? Yeah.",
+    "text": "Yeah, yeah, yeah, so do that. To open the PDF or the code document you need to have the Paul use an M and password.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 583.0,
-      "end": 586.0,
-      "text": " You will be coming there tomorrow, isn't it, Naviti?"
+      "start": 563.0,
+      "end": 566.52,
+      "text": " To open the PDF or the code document you need to have the"
     }
   },
   {
-    "text": "So, this one normal. This brand will be never one of the priority in the client section. Okay.",
+    "text": "Make it incredibly not. You need to open it. Yeah.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 646.0,
-      "end": 650.0,
-      "text": " This brand will be never one of the priority in the client section."
+      "start": 574.0,
+      "end": 575.0,
+      "text": " You need to open it."
     }
   },
   {
-    "text": "Okay. We are going to create a financial plan. We are going to create a report of planning for the company.",
+    "text": "Yes, yes, yes. So, encrypted should be given. Yeah, the password and everything.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 660.0,
+      "start": 586.0,
+      "end": 589.0,
+      "text": " So, encrypted should be given."
+    }
+  },
+  {
+    "text": "Yeah, the password and everything. We will send it in email. They will keep it.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 591.0,
+      "end": 593.0,
+      "text": " We will send it in email."
+    }
+  },
+  {
+    "text": "We will send it in email. They will keep it. Yes, sir.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 593.0,
+      "end": 594.0,
+      "text": " They will keep it."
+    }
+  },
+  {
+    "text": "And the only thing, sir. For why is not sir, if I send every details like. I send him this document.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 597.0,
+      "end": 601.0,
+      "text": " For why is not sir, if I send every details like."
+    }
+  },
+  {
+    "text": "For why is not sir, if I send every details like. I send him this document. Is this whatever the access you have got?",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 601.0,
+      "end": 603.0,
+      "text": " I send him this document."
+    }
+  },
+  {
+    "text": "Everything you have signed. Send me by today evening. I'll just make it into proper structure and I'll send it back to by.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 609.0,
+      "end": 611.0,
+      "text": " Send me by today evening."
+    }
+  },
+  {
+    "text": "Send me by today evening. I'll just make it into proper structure and I'll send it back to by. 10 or 9 o'clock.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 611.0,
+      "end": 615.0,
+      "text": " I'll just make it into proper structure and I'll send it back to by."
+    }
+  },
+  {
+    "text": "10 or 9 o'clock. No, before that we need to give them today. If they are given for today's date, we have to give it today's date.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 617.0,
+      "end": 619.0,
+      "text": " No, before that we need to give them today."
+    }
+  },
+  {
+    "text": "Is it okay? Like in the like how fast can I send that much? I can finish it off, sir.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 627.0,
+      "end": 630.0,
+      "text": " Like in the like how fast can I send that much?"
+    }
+  },
+  {
+    "text": "Yeah, no one can do it. If you know, what are things you need? This final project report, somebody of work.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 636.0,
+      "end": 639.0,
+      "text": " If you know, what are things you need?"
+    }
+  },
+  {
+    "text": "So you are your sign code. Oh, these things can you just share this same thing to? Yes, sir.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 651.0,
+      "end": 655.0,
+      "text": " Oh, these things can you just share this same thing to?"
+    }
+  },
+  {
+    "text": "I'm sure it already. This developer needs to have this is the work from developer. I'll share.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 657.0,
       "end": 662.0,
-      "text": " We are going to create a financial plan."
+      "text": " This developer needs to have this is the work from developer."
     }
   },
   {
-    "text": "We are going to create a financial plan. We are going to create a report of planning for the company. What are the budget plan?",
+    "text": "This developer needs to have this is the work from developer. I'll share. Just share.",
     "assignee": null,
     "role": null,
     "deadline": null,
@@ -723,64 +502,51 @@
     "confidence": 0.6,
     "source_segment": {
       "start": 662.0,
-      "end": 666.0,
-      "text": " We are going to create a report of planning for the company."
+      "end": 663.0,
+      "text": " I'll share."
     }
   },
   {
-    "text": "We are going to create a report of planning for the company. What are the budget plan? What are the client acquisition plan?",
+    "text": "I'll share. Just share. Just share that message in the group only.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 666.0,
+      "start": 663.0,
+      "end": 665.0,
+      "text": " Just share."
+    }
+  },
+  {
+    "text": "Just share. Just share that message in the group only. Don't.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 665.0,
       "end": 667.0,
-      "text": " What are the budget plan?"
+      "text": " Just share that message in the group only."
     }
   },
   {
-    "text": "What are the budget plan? What are the client acquisition plan? For the targeted amount which we need to raise or not raise reach, we need to get within",
+    "text": "Only this copy. Yeah, this one copy and send it to. Who?",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 667.0,
-      "end": 669.0,
-      "text": " What are the client acquisition plan?"
+      "start": 679.0,
+      "end": 683.0,
+      "text": " Yeah, this one copy and send it to."
     }
   },
   {
-    "text": "What are the client acquisition plan? For the targeted amount which we need to raise or not raise reach, we need to get within three months.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 669.0,
-      "end": 675.0,
-      "text": " For the targeted amount which we need to raise or not raise reach, we need to get within"
-    }
-  },
-  {
-    "text": "Jagan, you have made it right now. So, we need to discuss. We need to discuss this very clearly with AKK also.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 685.0,
-      "end": 686.0,
-      "text": " So, we need to discuss."
-    }
-  },
-  {
-    "text": "So, we need to discuss. We need to discuss this very clearly with AKK also. We have to, I know KK has been talking about this.",
+    "text": "Yeah, I was talking. Yeah, yeah, share it. Why is that?",
     "assignee": null,
     "role": null,
     "deadline": null,
@@ -788,64 +554,51 @@
     "confidence": 0.6,
     "source_segment": {
       "start": 686.0,
+      "end": 687.0,
+      "text": " Yeah, yeah, share it."
+    }
+  },
+  {
+    "text": "Why is that? I just want to share it. Or we send it to me.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.6,
+    "source_segment": {
+      "start": 688.0,
       "end": 689.0,
-      "text": " We need to discuss this very clearly with AKK also."
+      "text": " I just want to share it."
     }
   },
   {
-    "text": "So, you have to submit the one week of work sheet. You have to make the sheet for tomorrow, the tomorrow, always the Saturdays will be for the new plans.",
+    "text": "I just want to share it. Or we send it to me. I'm sure.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 701.0,
-      "end": 708.0,
-      "text": " You have to make the sheet for tomorrow, the tomorrow, always the Saturdays will be for the"
+      "start": 689.0,
+      "end": 692.0,
+      "text": " Or we send it to me."
     }
   },
   {
-    "text": "You have to make the sheet for tomorrow, the tomorrow, always the Saturdays will be for the new plans. We will be discussing about the data, whatever people have done.",
+    "text": "Okay, so that. Can you send me some. That was.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 708.0,
-      "end": 709.0,
-      "text": " new plans."
+      "start": 707.0,
+      "end": 710.0,
+      "text": " Can you send me some."
     }
   },
   {
-    "text": "new plans. We will be discussing about the data, whatever people have done. Then we will take care of the next plan for the next week and the next one.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 709.0,
-      "end": 712.0,
-      "text": " We will be discussing about the data, whatever people have done."
-    }
-  },
-  {
-    "text": "We will be discussing about the data, whatever people have done. Then we will take care of the next plan for the next week and the next one. Clear.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 712.0,
-      "end": 716.0,
-      "text": " Then we will take care of the next plan for the next week and the next one."
-    }
-  },
-  {
-    "text": "Yes sir. These are the four of, we need to be doing every week. Then once we reach, I mean, we, what you can say, selected a target, we have to work for",
+    "text": "I mean, like. Another link afternoon another document. This copy this.",
     "assignee": null,
     "role": null,
     "deadline": null,
@@ -853,1412 +606,359 @@
     "confidence": 0.6,
     "source_segment": {
       "start": 719.0,
-      "end": 724.0,
-      "text": " These are the four of, we need to be doing every week."
+      "end": 722.0,
+      "text": " Another link afternoon another document."
     }
   },
   {
-    "text": "the target to reach. Did me to reaching the target, we have, we will be facing a lot of problems in the team, other teams, client accusation, some other problem, some other things.",
+    "text": "So that. I mean, give space where the developer need to add. I mean, like this, no, no, no, no, no, no, no, no.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 732.0,
-      "end": 737.0,
-      "text": " Did me to reaching the target, we have, we will be facing a lot of problems in the team,"
+      "start": 727.0,
+      "end": 732.0,
+      "text": " I mean, give space where the developer need to add."
     }
   },
   {
-    "text": "other teams, client accusation, some other problem, some other things. So, all these things need to be tackled. Did me.",
+    "text": "Okay, okay. So, like somebody of the work completed an outcomes, but where we will heal ad. Let him add down like somewhere here.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 742.0,
-      "end": 744.0,
-      "text": " So, all these things need to be tackled."
+      "start": 742.82,
+      "end": 748.16,
+      "text": " So, like somebody of the work completed an outcomes, but where we will heal ad."
     }
   },
   {
-    "text": "So, there is a project target. Everyone will be there. We have to target particularly.",
+    "text": "Okay, sir. I'll share it to you. Yeah, yeah.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 754.0,
-      "end": 755.0,
-      "text": " Everyone will be there."
+      "start": 774.3000000000001,
+      "end": 775.3000000000001,
+      "text": " I'll share it to you."
     }
   },
   {
-    "text": "So, one client actually normal give and another one is also there. So, like these people, you, you don't have to discuss, I mean, you don't have to research about all the details like Manish, sorry, normal did.",
+    "text": "Yeah, yeah. So, share it with open link, okay? Okay, sir.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 760.0,
-      "end": 765.0,
-      "text": " So, like these people, you, you don't have to discuss, I mean, you don't have to research"
+      "start": 776.3000000000001,
+      "end": 778.5,
+      "text": " So, share it with open link, okay?"
     }
   },
   {
-    "text": "about all the details like Manish, sorry, normal did. Because he is in the research, that is why he did. But other people, if you understand that, okay, that person or that client,",
+    "text": "Yeah, look, see, responsible development team. So, whatever they mentioned at this, sending team is different. If it's a sending and development team need to answer that.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 768.0,
-      "end": 770.0,
-      "text": " Because he is in the research, that is why he did."
+      "start": 811.5,
+      "end": 814.5,
+      "text": " So, whatever they mentioned at this, sending team is different."
     }
   },
   {
-    "text": "you can give a name of them and the email area of them, we will start sending an email to them. Can I clear?",
+    "text": "So, whatever they mentioned at this, sending team is different. If it's a sending and development team need to answer that. Yeah, me.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 791.0,
-      "end": 793.0,
-      "text": " we will start sending an email to them."
+      "start": 814.5,
+      "end": 817.5,
+      "text": " If it's a sending and development team need to answer that."
     }
   },
   {
-    "text": "Yeah. So, like that data we need, okay, Jagan, Sangal. So, that data we need, as this point is this, that new new start-up are coming up for this.",
+    "text": "Yeah, just do it and let me know. Okay, then I will share with you. So, you will get the data.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 902.0,
-      "end": 907.0,
-      "text": " So, like that data we need, okay, Jagan, Sangal."
+      "start": 837.5,
+      "end": 839.5,
+      "text": " Okay, then I will share with you."
     }
   },
   {
-    "text": "So, like that data we need, okay, Jagan, Sangal. So, that data we need, as this point is this, that new new start-up are coming up for this. So, it means the market is new to it me.",
+    "text": "Okay, then I will share with you. So, you will get the data. So, you can add it, particularly.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 907.0,
-      "end": 913.0,
-      "text": " So, that data we need, as this point is this, that new new start-up are coming up for this."
+      "start": 839.5,
+      "end": 840.5,
+      "text": " So, you will get the data."
     }
   },
   {
-    "text": "Yeah, yeah. And basically, all the, I can say, vitros, big force, all-need-a, multiple gifts for a Diwali festival to gifting and whatever it is.",
+    "text": "Yes, sir. Okay, so anything else you need with me? Nothing, sir.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 917.0,
-      "end": 920.0,
-      "text": " And basically, all the, I can say, vitros, big force, all-need-a,"
+      "start": 843.5,
+      "end": 847.5,
+      "text": " Okay, so anything else you need with me?"
     }
   },
   {
-    "text": "So, it means, now, we can target to some other MNC's in Pune itself. We can send them a email that we are on these kind of things. So, we will give you bulk a gifting like that for the Christmas coming up.",
+    "text": "Yes, sir. He need to, he need to complete the this. And he have to share with me.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 940.0,
-      "end": 944.0,
-      "text": " We can send them a email that we are on these kind of things."
+      "start": 903.5,
+      "end": 906.5,
+      "text": " He need to, he need to complete the this."
     }
   },
   {
-    "text": "We can send them a email that we are on these kind of things. So, we will give you bulk a gifting like that for the Christmas coming up. You are coming up, you are coming up.",
+    "text": "He need to, he need to complete the this. And he have to share with me. I will share with the, I mean what he can say developer.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 944.0,
-      "end": 948.0,
-      "text": " So, we will give you bulk a gifting like that for the Christmas coming up."
+      "start": 906.5,
+      "end": 908.5,
+      "text": " And he have to share with me."
     }
   },
   {
-    "text": "So, how many things are coming up? So, in birthday, we will create a kind of a subscription model like that. Something like that.",
+    "text": "And he have to share with me. I will share with the, I mean what he can say developer. So, when the developer completed, he will reply it back.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 953.0,
-      "end": 957.0,
-      "text": " So, in birthday, we will create a kind of a subscription model like that."
+      "start": 908.5,
+      "end": 911.5,
+      "text": " I will share with the, I mean what he can say developer."
     }
   },
   {
-    "text": "Something like that. We will be sending them every, every, every big MNC's company because in MNC's what happens.",
+    "text": "I will share with the, I mean what he can say developer. So, when the developer completed, he will reply it back. Yeah.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 958.0,
-      "end": 963.0,
-      "text": " We will be sending them every, every, every big MNC's company because in MNC's what"
+      "start": 911.5,
+      "end": 914.5,
+      "text": " So, when the developer completed, he will reply it back."
     }
   },
   {
-    "text": "They may, you know, but Google Microsoft, all these companies that they are spoiling, they will have three-time food there. They will have all these kind of things.",
+    "text": "Yeah. Then we have to share. Yes.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 970.0,
-      "end": 972.0,
-      "text": " they will have three-time food there."
+      "start": 915.5,
+      "end": 916.5,
+      "text": " Then we have to share."
     }
   },
   {
-    "text": "they will have three-time food there. They will have all these kind of things. To reach that, if you have to work a lot.",
+    "text": "Because what, what happens here? Now, I will forward about this. Okay.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 972.0,
-      "end": 974.0,
-      "text": " They will have all these kind of things."
+      "start": 928.5,
+      "end": 930.5,
+      "text": " Now, I will forward about this."
     }
   },
   {
-    "text": "Right. So, we will ask for there from the HR itself. We will be connected with the HR.",
+    "text": "Now I have other meetings, other topics, other different things. So, I will go into that deep. I'll be focusing on that.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 989.0,
-      "end": 991.0,
-      "text": " So, we will ask for there from the HR itself."
+      "start": 934.5,
+      "end": 936.5,
+      "text": " So, I will go into that deep."
     }
   },
   {
-    "text": "So, we will ask for there from the HR itself. We will be connected with the HR. They mean, every bigger, bigger company is HR.",
+    "text": "I'll be focusing on that. So, that is where we will miss out. So, as an operation,",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 991.0,
-      "end": 993.0,
-      "text": " We will be connected with the HR."
+      "start": 937.5,
+      "end": 939.5,
+      "text": " So, that is where we will miss out."
     }
   },
   {
-    "text": "They mean, every bigger, bigger company is HR. We will be giving an offer like this. We are doing this.",
+    "text": "So, as an operation, I will be able to do that. I will be able to do that.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 995.0,
-      "end": 997.0,
-      "text": " We will be giving an offer like this."
+      "start": 941.5,
+      "end": 943.5,
+      "text": " I will be able to do that."
     }
   },
   {
-    "text": "We are doing this. So, these are the plans. We can give them these people.",
+    "text": "I will be able to do that. I will be able to do that. I will be able to do that.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 998.0,
-      "end": 999.0,
-      "text": " So, these are the plans."
+      "start": 943.5,
+      "end": 945.5,
+      "text": " I will be able to do that."
     }
   },
   {
-    "text": "We can give them these people. We will be media. I am clear.",
+    "text": "I will be able to do that. I will be able to do that. I will be able to do that.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1001.0,
-      "end": 1002.0,
-      "text": " We will be media."
+      "start": 945.5,
+      "end": 946.5,
+      "text": " I will be able to do that."
     }
   },
   {
-    "text": "So, whenever we are taking a meeting with them, we will be noting down these points. Okay.",
+    "text": "I will be able to do that. I will be able to do that. I will be able to do that.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1006.0,
-      "end": 1008.0,
-      "text": " we will be noting down these points."
+      "start": 946.5,
+      "end": 947.5,
+      "text": " I will be able to do that."
     }
   },
   {
-    "text": "Okay. This is what we are planning. So, if you are interested, we can do like this.",
+    "text": "I will be able to do that. I will be able to do that. So, that is where we will miss out.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1009.0,
-      "end": 1010.0,
-      "text": " This is what we are planning."
+      "start": 947.5,
+      "end": 948.5,
+      "text": " I will be able to do that."
     }
   },
   {
-    "text": "I am clear. Just give this laneway and just for good people will do it. I am clear.",
+    "text": "I will be able to do that. So, that is where we will miss out. So, as an operation team,",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1034.0,
-      "end": 1037.0,
-      "text": " Just give this laneway and just for good people will do it."
+      "start": 949.5,
+      "end": 951.5,
+      "text": " So, that is where we will miss out."
     }
   },
   {
-    "text": "We can go and technology analytics setup. Laneway implant analyst dashboard customer behavior purchases, triggers, gifting occasions.",
+    "text": "So, as an operation team, operation team should understand these are the projects which we will go in through. These are the deadlines which we need to give.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1072.0,
-      "end": 1075.0,
-      "text": " Laneway implant analyst dashboard customer behavior purchases,"
+      "start": 953.5,
+      "end": 956.5,
+      "text": " operation team should understand these are the projects which we will go in through."
     }
   },
   {
-    "text": "Laneways good partner for Muslim. We can please have consulting class technology. We have this media execution.",
+    "text": "operation team should understand these are the projects which we will go in through. These are the deadlines which we need to give. These are the applications which we need to follow.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1102.0,
-      "end": 1104.0,
-      "text": " We can please have consulting class technology."
+      "start": 956.5,
+      "end": 958.5,
+      "text": " These are the deadlines which we need to give."
     }
   },
   {
-    "text": "Whoever is client with us. They will be in our ecosystem. Am I clear?",
+    "text": "These are the deadlines which we need to give. These are the applications which we need to follow. Yeah.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1198.0,
-      "end": 1200.0,
-      "text": " They will be in our ecosystem."
+      "start": 958.5,
+      "end": 961.5,
+      "text": " These are the applications which we need to follow."
     }
   },
   {
-    "text": "Yes. So, we will be. If we give results, they will definitely approach us.",
+    "text": "after completing that, we will take three o'clock or some reach. Okay.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
     "confidence": 0.6,
     "source_segment": {
-      "start": 1243.0,
-      "end": 1244.0,
-      "text": " So, we will be."
-    }
-  },
-  {
-    "text": "So, we will be. If we give results, they will definitely approach us. Yeah.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1244.0,
-      "end": 1248.0,
-      "text": " If we give results, they will definitely approach us."
-    }
-  },
-  {
-    "text": "Yes. We will give both things. So, to handle this.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1252.0,
-      "end": 1255.0,
-      "text": " We will give both things."
-    }
-  },
-  {
-    "text": "I mean, of course, we have to. Raise the expectation what client will quit. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1271.0,
-      "end": 1275.0,
-      "text": " Raise the expectation what client will quit."
-    }
-  },
-  {
-    "text": "Okay. We will do it. We will do it.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1276.0,
-      "end": 1277.0,
-      "text": " We will do it."
-    }
-  },
-  {
-    "text": "We will do it. We will do it. Not an issue.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1277.0,
-      "end": 1278.0,
-      "text": " We will do it."
-    }
-  },
-  {
-    "text": "Not an issue. We will do much more. Registered.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1279.0,
-      "end": 1280.0,
-      "text": " We will do much more."
-    }
-  },
-  {
-    "text": "Person currently. He will automatically. He will show that.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1327.0,
-      "end": 1328.0,
-      "text": " He will automatically."
-    }
-  },
-  {
-    "text": "He will automatically. He will show that. How exactly.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1328.0,
-      "end": 1329.0,
-      "text": " He will show that."
-    }
-  },
-  {
-    "text": "Go and ask laneway. And then they will check. Who is laneway?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1355.0,
-      "end": 1356.0,
-      "text": " And then they will check."
-    }
-  },
-  {
-    "text": "I'm just saying the memory. Then it will save. Well, normally when you chat.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1383.0,
-      "end": 1385.0,
-      "text": " Then it will save."
-    }
-  },
-  {
-    "text": "The important. It will note. And it automatically.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1389.0,
-      "end": 1390.0,
-      "text": " It will note."
-    }
-  },
-  {
-    "text": "It's already saved in the memory. Yes, because we are researching on them now and then. That's why it's coming and upgrading.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1406.0,
-      "end": 1409.0,
-      "text": " Yes, because we are researching on them now and then."
-    }
-  },
-  {
-    "text": "Okay. For research purpose, that would be better. But perplexity.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1416.0,
-      "end": 1419.0,
-      "text": " For research purpose, that would be better."
-    }
-  },
-  {
-    "text": "Yes, no. No, this point I want to share to everybody is that. Use whichever is preferable for you.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1427.0,
-      "end": 1430.0,
-      "text": " No, this point I want to share to everybody is that."
-    }
-  },
-  {
-    "text": "It means here. There will only use a Gemini. So it means let him use.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1443.0,
-      "end": 1445.0,
-      "text": " There will only use a Gemini."
-    }
-  },
-  {
-    "text": "Blogs writing. Then we will write about their blogs also. So after one client report,",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1506.0,
-      "end": 1508.0,
-      "text": " Then we will write about their blogs also."
-    }
-  },
-  {
-    "text": "So after one client report, we will be giving a case study. Now the case studies,",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1510.0,
-      "end": 1512.0,
-      "text": " we will be giving a case study."
-    }
-  },
-  {
-    "text": "So the rich. This case study we need to write. Hmm.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1515.0,
-      "end": 1517.0,
-      "text": " This case study we need to write."
-    }
-  },
-  {
-    "text": "So this thing, we will write down with AI only that we did there. Instagram.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1523.0,
-      "end": 1526.0,
-      "text": " we will write down with AI only that we did there."
-    }
-  },
-  {
-    "text": "There. Let's say it. Then we plan for their marketing plans.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1529.0,
-      "end": 1530.0,
-      "text": " Let's say it."
-    }
-  },
-  {
-    "text": "Let's say it. Then we plan for their marketing plans. And we created some form regarding that.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1530.0,
-      "end": 1532.0,
-      "text": " Then we plan for their marketing plans."
-    }
-  },
-  {
-    "text": "Yes, sir. That should be the power. Look.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1570.0,
-      "end": 1571.0,
-      "text": " That should be the power."
-    }
-  },
-  {
-    "text": "So now we are using a to manipulate them as well. So they will also get. What is not a manipulating that they will also get a trust",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1605.0,
-      "end": 1606.0,
-      "text": " So they will also get."
-    }
-  },
-  {
-    "text": "So they will also get. What is not a manipulating that they will also get a trust regarding.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1606.0,
-      "end": 1610.0,
-      "text": " What is not a manipulating that they will also get a trust"
-    }
-  },
-  {
-    "text": "It means automatically we are getting a trust. Then next call will be in my phone on you. Come up here.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1623.0,
-      "end": 1626.0,
-      "text": " Then next call will be in my phone on you."
-    }
-  },
-  {
-    "text": "Is there any other players doing like this still now? Anybody research normal? Sangal.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1644.0,
-      "end": 1645.0,
-      "text": " Anybody research normal?"
-    }
-  },
-  {
-    "text": "That is where we are doing. So we will be the unicorn. For sure.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1661.0,
-      "end": 1662.0,
-      "text": " So we will be the unicorn."
-    }
-  },
-  {
-    "text": "I am going to clear guys. If you have the proper plan, we can do this. Under person.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1665.0,
-      "end": 1668.0,
-      "text": " If you have the proper plan, we can do this."
-    }
-  },
-  {
-    "text": "Then we sold the operation fee. But we needed the name lane. So that is why we took the back lane way.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1692.0,
-      "end": 1694.0,
-      "text": " But we needed the name lane."
-    }
-  },
-  {
-    "text": "Then I thought like a tech I cannot do. Then I will focus on marketing. I am a marketing guy from my childhood itself.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1736.0,
-      "end": 1737.0,
-      "text": " Then I will focus on marketing."
-    }
-  },
-  {
-    "text": "Okay. We will add the tech. So that our company will also place us a tech company.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1747.0,
-      "end": 1748.0,
-      "text": " We will add the tech."
-    }
-  },
-  {
-    "text": "We will add the tech. So that our company will also place us a tech company. And then I thought.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1748.0,
-      "end": 1751.0,
-      "text": " So that our company will also place us a tech company."
-    }
-  },
-  {
-    "text": "If I'm continuing, you can. I will come there. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1774.0,
-      "end": 1775.0,
-      "text": " I will come there."
-    }
-  },
-  {
-    "text": "Okay. I will go there. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1776.0,
-      "end": 1777.0,
-      "text": " I will go there."
-    }
-  },
-  {
-    "text": "Are you guys on doing key? So whenever we fixed it, I mean, we're ready for the time. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1791.0,
-      "end": 1795.0,
-      "text": " So whenever we fixed it, I mean, we're ready for the time."
-    }
-  },
-  {
-    "text": "Some other brands and blog calls and told. So I have a fixed schedule. So you guys should also have a fixed schedule.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1807.0,
-      "end": 1809.0,
-      "text": " So I have a fixed schedule."
-    }
-  },
-  {
-    "text": "So I have a fixed schedule. So you guys should also have a fixed schedule. I'm clear.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1809.0,
-      "end": 1812.0,
-      "text": " So you guys should also have a fixed schedule."
-    }
-  },
-  {
-    "text": "Then I wanted to segregate company as an something proper. Then I thought will it. I mean, nobody has.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1848.0,
-      "end": 1850.0,
-      "text": " Then I thought will it."
-    }
-  },
-  {
-    "text": "You can explain. We need to. We need to.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1878.0,
-      "end": 1879.0,
-      "text": " We need to."
-    }
-  },
-  {
-    "text": "We need to. We need to. Gemini Pagluki.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1879.0,
-      "end": 1880.0,
-      "text": " We need to."
-    }
-  },
-  {
-    "text": "Two client pitching. We were planning whatever services we can provide. So normal was sharing.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1897.0,
-      "end": 1900.0,
-      "text": " We were planning whatever services we can provide."
-    }
-  },
-  {
-    "text": "So this. Two clients will be the part of. Our next month.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1921.0,
-      "end": 1923.0,
-      "text": " Two clients will be the part of."
-    }
-  },
-  {
-    "text": "Next week. It's full for creating the strategy budget planning. So how much we needed.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1931.0,
-      "end": 1934.0,
-      "text": " It's full for creating the strategy budget planning."
-    }
-  },
-  {
-    "text": "It's full for creating the strategy budget planning. So how much we needed. How much we can earn.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1934.0,
-      "end": 1935.0,
-      "text": " So how much we needed."
-    }
-  },
-  {
-    "text": "For different different departments. So we will give some assignment. Kind of thing.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1958.0,
-      "end": 1959.0,
-      "text": " So we will give some assignment."
-    }
-  },
-  {
-    "text": "Kind of thing. Then we will take them for the hiring. Then according to the once they understand the working culture.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 1960.0,
-      "end": 1961.0,
-      "text": " Then we will take them for the hiring."
-    }
-  },
-  {
-    "text": "But then the kind of restriction or anything comes. Then we will see later how it goes on, but right now you are in the training, you are understanding the core, understanding our laneway, what we are building, what we are scaling, what we are going to do. So, these two things only I had discussed with you right now. So, Sangal, Jagan, I have given you some more work.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2013.0,
-      "end": 2022.0,
-      "text": " Then we will see later how it goes on, but right now you are in the training, you are understanding the core, understanding our laneway, what we are building, what we are scaling, what we are going to do."
-    }
-  },
-  {
-    "text": "So, these two things only I had discussed with you right now. So, Sangal, Jagan, I have given you some more work. So, you have to make sure that other works are also completed, then we will have a meeting tomorrow. Okay. Okay. So, I have an interview right now. So, two more minutes I will discuss. So, there is not on the points, probably not on the points.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2028.0,
-      "end": 2034.0,
-      "text": " So, you have to make sure that other works are also completed, then we will have a meeting tomorrow."
-    }
-  },
-  {
-    "text": "So, you have to make sure that other works are also completed, then we will have a meeting tomorrow. Okay. Okay. So, I have an interview right now. So, two more minutes I will discuss. So, there is not on the points, probably not on the points. Or then you take the next action plan, projects, whatever required meetings, all the details, check all the people's what you can say.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2034.0,
-      "end": 2043.0,
-      "text": " Okay. Okay. So, I have an interview right now. So, two more minutes I will discuss. So, there is not on the points, probably not on the points."
-    }
-  },
-  {
-    "text": "Okay. Okay. So, I have an interview right now. So, two more minutes I will discuss. So, there is not on the points, probably not on the points. Or then you take the next action plan, projects, whatever required meetings, all the details, check all the people's what you can say. Worksheet, everything make it Paka. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2043.0,
-      "end": 2051.0,
-      "text": " Or then you take the next action plan, projects, whatever required meetings, all the details, check all the people's what you can say."
-    }
-  },
-  {
-    "text": "Yes sir. So, we will start getting half noted, I will share, what not at half and what. So, you are going to replace very clearly. I am going to make an agent only for operation.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2064.0,
-      "end": 2069.0,
-      "text": " So, we will start getting half noted, I will share, what not at half and what."
-    }
-  },
-  {
-    "text": "So, you are going to replace very clearly. I am going to make an agent only for operation. So, this is very, very clear, very clear. So, that is also many issue next step. Okay. We will do it. Yes sir.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2076.0,
-      "end": 2085.0,
-      "text": " So, this is very, very clear, very clear. So, that is also many issue next step. Okay. We will do it."
-    }
-  },
-  {
-    "text": "Yes sir. Yeah, fully AI power. Okay. People don't want to work with us, I will make them into AI power too. Yeah, yes sir.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2086.0,
-      "end": 2092.0,
-      "text": " Yeah, fully AI power. Okay. People don't want to work with us, I will make them into AI power too."
-    }
-  },
-  {
-    "text": "Yeah, yes sir. So, let's see. So, I mean whenever these people, they have to tell to HR that whenever you are sending and meeting link, not in the group. Okay. Manish, tell them. Yeah.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2094.0,
-      "end": 2106.0,
-      "text": " So, let's see. So, I mean whenever these people, they have to tell to HR that whenever you are sending and meeting link,"
-    }
-  },
-  {
-    "text": "Because other people don't know, I am in a meeting or not. Okay. So, KK just discuss other details also from whatever questions or anything you need to ask. Jagan, Sankal, Pandore and just continue this meeting. I am just leaving. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2117.0,
-      "end": 2123.0,
-      "text": " So, KK just discuss other details also from whatever questions or anything you need to ask."
-    }
-  },
-  {
-    "text": "Okay. Yeah. Continue that. Manish, come, come, come. No, no, no. Actually, KK you need there also. But it's fine. Continue, continue. We will do it. Okay. It's a Malaysian in Singapore girl, I don't know.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2132.0,
-      "end": 2137.0,
-      "text": " No, no, no. Actually, KK you need there also. But it's fine. Continue, continue."
-    }
-  },
-  {
-    "text": "No, no, no. Actually, KK you need there also. But it's fine. Continue, continue. We will do it. Okay. It's a Malaysian in Singapore girl, I don't know. I will update you. Okay. Bye bye.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2137.0,
-      "end": 2143.0,
-      "text": " We will do it. Okay. It's a Malaysian in Singapore girl, I don't know."
-    }
-  },
-  {
-    "text": "We will do it. Okay. It's a Malaysian in Singapore girl, I don't know. I will update you. Okay. Bye bye. Bye bye bye. Bye, sir. Bye.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2143.0,
-      "end": 2149.0,
-      "text": " I will update you. Okay. Bye bye."
-    }
-  },
-  {
-    "text": "Sankal Chagin. Yeah, I did some research. Oh, you did. Like, do you want to present?",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2163.0,
-      "end": 2167.0,
-      "text": " Yeah, I did some research."
-    }
-  },
-  {
-    "text": "Oh, you did. Like, do you want to present? Whenever you say, let's discuss then if you want. No, I don't want like, if you want to then here, we can otherwise like,",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2173.0,
-      "end": 2179.0,
-      "text": " Whenever you say, let's discuss then if you want."
-    }
-  },
-  {
-    "text": "No, I don't want like, if you want to then here, we can otherwise like, let's discuss, let's discuss because the thing is that I haven't been able to research because of my time constraints. That was the thing.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2184.0,
-      "end": 2189.0,
-      "text": " let's discuss, let's discuss because the thing is that I haven't been able to research"
-    }
-  },
-  {
-    "text": "Yeah, that's it. We need to research their founders that how they started the business. Also their regulatory and legal part that if we join with them,",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2259.0,
-      "end": 2263.0,
-      "text": " We need to research their founders that how they started the business."
-    }
-  },
-  {
-    "text": "Also their regulatory and legal part that if we join with them, it will be a long term or a short term than how. So Google server told that to invest in their research about their roots.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2269.0,
-      "end": 2272.0,
-      "text": " it will be a long term or a short term than how."
-    }
-  },
-  {
-    "text": "it will be a long term or a short term than how. So Google server told that to invest in their research about their roots. And then we can accordingly make an action plan for a pitch.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2272.0,
-      "end": 2277.0,
-      "text": " So Google server told that to invest in their research about their roots."
-    }
-  },
-  {
-    "text": "So Google server told that to invest in their research about their roots. And then we can accordingly make an action plan for a pitch. Okay.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2277.0,
-      "end": 2284.0,
-      "text": " And then we can accordingly make an action plan for a pitch."
-    }
-  },
-  {
-    "text": "as a monthly payment. And if we go to a semi company, then it will charge between 40,000 to 1 lakh plus. And then if you go to large company enterprise, then it will charge between 75,000 to 3 lakhs.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2346.0,
-      "end": 2351.0,
-      "text": " And if we go to a semi company, then it will charge between 40,000 to 1 lakh plus."
-    }
-  },
-  {
-    "text": "And if we go to a semi company, then it will charge between 40,000 to 1 lakh plus. And then if you go to large company enterprise, then it will charge between 75,000 to 3 lakhs. Then if we go for SMM, then the day-to-day management will cost around 12 to 40,000 per month.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2351.0,
-      "end": 2358.0,
-      "text": " And then if you go to large company enterprise, then it will charge between 75,000 to 3 lakhs."
-    }
-  },
-  {
-    "text": "And then if you go to large company enterprise, then it will charge between 75,000 to 3 lakhs. Then if we go for SMM, then the day-to-day management will cost around 12 to 40,000 per month. Only SEO to so that it will cost around 10,000 to 50 and PPC is excluded from SEO every time.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2358.0,
-      "end": 2369.0,
-      "text": " Then if we go for SMM, then the day-to-day management will cost around 12 to 40,000 per month."
-    }
-  },
-  {
-    "text": "Then if we go for SMM, then the day-to-day management will cost around 12 to 40,000 per month. Only SEO to so that it will cost around 10,000 to 50 and PPC is excluded from SEO every time. So yeah, it will be around 10 to 30,000 or 10 to 20 percent of ad purchase.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2369.0,
-      "end": 2379.0,
-      "text": " Only SEO to so that it will cost around 10,000 to 50 and PPC is excluded from SEO every time."
-    }
-  },
-  {
-    "text": "Only SEO to so that it will cost around 10,000 to 50 and PPC is excluded from SEO every time. So yeah, it will be around 10 to 30,000 or 10 to 20 percent of ad purchase. Then content marketing will be between 8 to 25,000 and then website design development will be around 10,000 to 1 lakh plus.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2379.0,
-      "end": 2384.0,
-      "text": " So yeah, it will be around 10 to 30,000 or 10 to 20 percent of ad purchase."
-    }
-  },
-  {
-    "text": "So yeah, it will be around 10 to 30,000 or 10 to 20 percent of ad purchase. Then content marketing will be between 8 to 25,000 and then website design development will be around 10,000 to 1 lakh plus. And branding will be around 20,000 to 50,000 plus.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2384.0,
-      "end": 2393.0,
-      "text": " Then content marketing will be between 8 to 25,000 and then website design development will be around 10,000 to 1 lakh plus."
-    }
-  },
-  {
-    "text": "Then content marketing will be between 8 to 25,000 and then website design development will be around 10,000 to 1 lakh plus. And branding will be around 20,000 to 50,000 plus. And for PPC, AdNCT is separate like that is standard in the industry.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2393.0,
-      "end": 2397.0,
-      "text": " And branding will be around 20,000 to 50,000 plus."
-    }
-  },
-  {
-    "text": "Then for the consultancy strategy price. So hourly rate will be around 50,000 to 10,000. If you go to independent freelancer or small firm.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2407.0,
-      "end": 2412.0,
-      "text": " So hourly rate will be around 50,000 to 10,000."
-    }
-  },
-  {
-    "text": "If you go to independent freelancer or small firm. And if senior and specialist consultant, then it will be around 10,000 to 40,000 plus. And if we go for monthly retainer, then small business management consulting will be around 5,000 to 45,000 per month.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2416.0,
-      "end": 2423.0,
-      "text": " And if senior and specialist consultant, then it will be around 10,000 to 40,000 plus."
-    }
-  },
-  {
-    "text": "And if senior and specialist consultant, then it will be around 10,000 to 40,000 plus. And if we go for monthly retainer, then small business management consulting will be around 5,000 to 45,000 per month. And project-based fee, it will be around 50,000 to several lakhs.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2423.0,
-      "end": 2434.0,
-      "text": " And if we go for monthly retainer, then small business management consulting will be around 5,000 to 45,000 per month."
-    }
-  },
-  {
-    "text": "And if we go for monthly retainer, then small business management consulting will be around 5,000 to 45,000 per month. And project-based fee, it will be around 50,000 to several lakhs. Like the company will be like medium to large companies will be involved in this one.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2434.0,
-      "end": 2440.0,
-      "text": " And project-based fee, it will be around 50,000 to several lakhs."
-    }
-  },
-  {
-    "text": "And project-based fee, it will be around 50,000 to several lakhs. Like the company will be like medium to large companies will be involved in this one. And daily rate is also there.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2440.0,
-      "end": 2448.0,
-      "text": " Like the company will be like medium to large companies will be involved in this one."
-    }
-  },
-  {
-    "text": "Yeah, that's all. Okay, can you share me this door? I can average out and see.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2477.0,
-      "end": 2479.0,
-      "text": " Okay, can you share me this door?"
-    }
-  },
-  {
-    "text": "Yeah, I have found it. And share the door. Yeah, you can present so that I can also keep no thing.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2497.0,
-      "end": 2499.0,
-      "text": " And share the door."
-    }
-  },
-  {
-    "text": "basic package for startups. We will do like a package, this is just an idea,",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2663.0,
-      "end": 2666.0,
-      "text": " We will do like a package,"
-    }
-  },
-  {
-    "text": "Okay. The earth branch will spend most in two to 25. We already worked in the 6th.",
-    "assignee": null,
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.6,
-    "source_segment": {
-      "start": 2748.64,
-      "end": 2749.64,
-      "text": " The earth branch will spend most in two to 25."
+      "start": 989.5,
+      "end": 992.5,
+      "text": " we will take three o'clock or some reach."
     }
   }
 ]
