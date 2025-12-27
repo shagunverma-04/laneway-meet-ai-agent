@@ -4,6 +4,7 @@ requests
 python-multipart
 pydantic
 openai
+openai-whisper 
 python-dotenv
 google-generativeai
 protobuf<5.0.0

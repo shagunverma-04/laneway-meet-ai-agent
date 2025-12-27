@@ -31,6 +31,14 @@ async def read_root():
         raise HTTPException(status_code=404, detail="index.html not found")
     return FileResponse(index_path)
 
+@app.get("/styles.css")
+async def read_css():
+    """Serve the styles.css file."""
+    css_path = BASE_DIR / "styles.css"
+    if not css_path.exists():
+        raise HTTPException(status_code=404, detail="styles.css not found")
+    return FileResponse(css_path)
+
 @app.post("/ingest/")
 async def ingest(file: UploadFile = File(...)):
     dst = BASE_DIR / file.filename
