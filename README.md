@@ -1,42 +1,94 @@
-# Meet-AI-Agent PoC
-https://meet-ai-agent-git-main-shaguns-projects-41241d91.vercel.app/
-**What this is:** A minimal proof-of-concept repository that ingests a Google Meet recording (mp4),
-extracts audio, transcribes (whisper or Google STT), optionally merges diarization, extracts action items
-using an LLM prompt, and performs simple assignment matching against a local employee JSON.
+# 🎥 Laneway Meet AI Agent
 
-**Not production-ready.** This PoC focuses on structure, prompts, and a simple pipeline you can run locally.
+A powerful, AI-driven web application designed to streamline post-meeting workflows. This tool automatically ingests meeting recordings, generates accurate transcripts, identifies action items, and assigns them to team members.
 
-## Structure
-- `scripts/extract_audio.py` — extracts WAV from MP4 using ffmpeg
-- `scripts/transcribe.py` — transcribes audio (supports local Whisper or placeholder for cloud STT)
-- `scripts/merge_diarization_transcript.py` — helper to merge diarization results with transcript segments
-- `scripts/extract_tasks.py` — calls an LLM (OpenAI) to extract action items into JSON
-- `scripts/assign.py` — simple assignment logic using employee profiles
-- `app.py` — FastAPI wrapper exposing endpoints for ingest & process
-- `requirements.txt` — Python deps (for PoC)
-- `Dockerfile` — containerization example
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688)
+![Redis](https://img.shields.io/badge/Cache-Redis-red)
 
-## Quickstart (local)
-1. Install ffmpeg (system package).
-2. Create a virtualenv and install requirements:
-   ```
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
-3. Place a sample `meeting.mp4` in the repo root.
-4. Run the pipeline:
-   ```
-   python scripts/extract_audio.py meeting.mp4 audio.wav
-   python scripts/transcribe.py audio.wav --model small
-   python scripts/extract_tasks.py transcript.json --meeting_date 2025-12-01
-   python scripts/assign.py tasks.json employees.json
-   ```
+## ✨ Features
 
-## Notes
-- `scripts/transcribe.py` supports `whisper` (local) if you install `openai-whisper`.
-- `scripts/extract_tasks.py` expects an OpenAI API key in `OPENAI_API_KEY` environment variable and will use the `gpt-4o-mini` or `gpt-4o` family if available. You can modify prompts easily.
-- Diarization integration points are marked in comments — recommended libraries: `whisperx` or `pyannote.audio`.
+- **🚀 Smart Transcription**: Uses **Faster-Whisper** for high-performance, local speech-to-text conversion. Capable of running heavily optimized inference on CPU/GPU.
+- **⚡ Intelligent Caching**: Integrated **Redis** caching layer ensures that previously processed files are retrieved instantly, saving time and compute resources.
+- **📝 Action Item Extraction**: Leverages LLMs (OpenAI GPT) to parse transcripts and extract concrete tasks, deadlines, and owners.
+- **🎨 Modern UI**: A sleek, responsive dark-mode web interface for easy file uploads and result viewing.
+- **📂 Wide Format Support**: Ingests `mp4`, `wav`, and other common media formats via `ffmpeg`.
 
-## License
-MIT
+## 🛠️ Tech Stack
+
+- **Backend**: FastAPI (Python)
+- **Frontend**: Vanilla HTML5 / CSS3 (Responsive Design)
+- **AI/ML**: 
+  - `faster-whisper` (Local Transcription)
+  - `openai-gpt` (Task Extraction)
+- **Infrastructure**:
+  - Redis (Caching)
+  - FFmpeg (Audio Processing)
+  - Docker (Containerization)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+1.  **Python 3.10+** installed.
+2.  **FFmpeg** installed and added to system PATH.
+3.  **Redis Server** running locally (e.g., via Memurai on Windows or Docker).
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/shagunverma-04/laneway-meet-ai-agent.git
+    cd laneway-meet-ai-agent
+    ```
+
+2.  **Set up Virtual Environment:**
+    ```bash
+    python -m venv .venv
+    # Windows
+    .venv\Scripts\activate
+    # Mac/Linux
+    source .venv/bin/activate
+    ```
+
+3.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Configure Environment:**
+    Create a `.env` file in the root directory:
+    ```env
+    OPENAI_API_KEY=sk-your-api-key-here
+    ```
+
+### Running the Application
+
+1.  **Ensure Redis is running** (Default: localhost:6379).
+2.  **Start the Server:**
+    ```bash
+    python app.py
+    ```
+3.  **Access the UI:**
+    Open your browser and navigate to `http://localhost:8000`.
+
+## 🐳 Deployment
+
+The application is container-ready and includes a `Dockerfile`.
+
+### Deploying to Render/Cloud
+1.  **Database**: Ensure you have a Redis instance available (e.g., Render Redis).
+2.  **Environment Variables**: Set `OPENAI_API_KEY` and any Redis configuration variables needed.
+3.  **Build Command**: `pip install -r requirements.txt`
+4.  **Start Command**: `python app.py` (or `uvicorn app:app --host 0.0.0.0 --port $PORT`)
+
+## 📂 Project Structure
+
+- `app.py`: Main FastAPI application and API endpoints.
+- `scripts/transcribe.py`: Logic for Whisper transcription (supports Local & API).
+- `scripts/extract_tasks.py`: LLM-based task extraction logic.
+- `index.html` & `styles.css`: Frontend user interface.
+- `requirements.txt`: Project dependencies.
+
+
