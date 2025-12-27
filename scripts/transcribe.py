@@ -11,27 +11,56 @@ except ImportError:
     pass  # python-dotenv not installed, that's okay
 
 def whisper_transcribe_local(audio_path, model_name="small"):
-    """Transcribe using local Whisper model."""
+    """Transcribe using local Faster-Whisper model (Optimized for speed)."""
+    print(f"Loading Faster-Whisper model: {model_name}...")
     try:
-        import whisper
+        from faster_whisper import WhisperModel
         import torch
-    except Exception as e:
-        print("Whisper not installed. Install with: pip install -U openai-whisper")
-        raise
-    model = whisper.load_model(model_name)
-    
-    # Check and report GPU availability
+    except ImportError:
+        print("Faster-Whisper not installed. Falling back to standard Whisper...")
+        # Fallback to standard OpenAI Whisper if faster-whisper is missing
+        try:
+            import whisper
+            import torch
+        except ImportError:
+             print("Whisper not installed. Install with: pip install -U openai-whisper faster-whisper")
+             raise
+        
+        model = whisper.load_model(model_name)
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        print(f"Transcribing with STANDARD whisper model: {model_name} on {device.upper()}")
+        result = model.transcribe(audio_path, language='en')
+        transcript = []
+        for seg in result.get("segments", []):
+            transcript.append({"start": seg["start"], "end": seg["end"], "text": seg["text"]})
+        return transcript
+
+    # Faster-Whisper Implementation
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"Transcribing with local whisper model: {model_name} on {device.upper()}")
-    if torch.cuda.is_available():
-        print(f"GPU: {torch.cuda.get_device_name(0)}")
+    compute_type = "float16" if device == "cuda" else "int8"
     
-    result = model.transcribe(audio_path, language='en')
-    # result contains 'segments' with start, end, text
-    transcript = []
-    for seg in result.get("segments", []):
-        transcript.append({"start": seg["start"], "end": seg["end"], "text": seg["text"]})
-    return transcript
+    print(f"Transcribing with FASTER-Whisper on {device.upper()} ({compute_type})")
+    
+    try:
+        model = WhisperModel(model_name, device=device, compute_type=compute_type)
+        segments, info = model.transcribe(audio_path, beam_size=5, language="en")
+        
+        transcript = []
+        # segments is a generator, so iterating processes the audio
+        for segment in segments:
+            transcript.append({
+                "start": segment.start, 
+                "end": segment.end, 
+                "text": segment.text
+            })
+        return transcript
+    except Exception as e:
+        print(f"Faster-Whisper failed: {e}. Falling back to standard Whisper.")
+        # Fallback copy-paste from above (simplified)
+        import whisper
+        model = whisper.load_model(model_name)
+        result = model.transcribe(audio_path, language='en')
+        return [{"start": s["start"], "end": s["end"], "text": s["text"]} for s in result.get("segments", [])]
 
 def whisper_transcribe_openai(audio_path):
     """Transcribe using OpenAI Whisper API."""

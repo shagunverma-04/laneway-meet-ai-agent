@@ -9,3 +9,5 @@ python-dotenv
 google-generativeai
 protobuf<5.0.0
 grpcio-status
+redis
+faster-whisper

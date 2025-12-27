@@ -21,8 +21,7 @@
                     style="display: block; margin-bottom: 10px; font-weight: 600;">
                     API Base URL:
                 </label>
-                <input type="text" id="apiUrl" class="api-url-input" placeholder="http://localhost:8000"
-                    value="http://localhost:8000" />
+                <input type="text" id="apiUrl" class="api-url-input" placeholder="Base URL" />
 
                 <div class="upload-area" id="uploadArea">
                     <div class="upload-icon">📁</div>
@@ -69,6 +68,9 @@
 
     <script>
         const apiUrlInput = document.getElementById('apiUrl');
+        // Automatically set the API URL to the current domain (works for localhost and specific deployment domains)
+        apiUrlInput.value = window.location.origin;
+
         const uploadArea = document.getElementById('uploadArea');
         const fileInput = document.getElementById('fileInput');
         const fileInfo = document.getElementById('fileInfo');

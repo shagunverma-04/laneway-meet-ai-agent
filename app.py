@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, BackgroundTasks, HTTPException, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
-import shutil, os, subprocess, json, sys
+import shutil, os, subprocess, json, sys, hashlib, redis
 from pathlib import Path
 
 # Try to load .env file if python-dotenv is available.
@@ -10,6 +10,14 @@ try:
     load_dotenv()
 except ImportError:
     pass  # python-dotenv not installed, that's okay.
+
+# Initialize Redis client
+# We use decode_responses=True so we get strings instead of bytes
+try:
+    redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+except Exception as e:
+    print(f"Redis init warning: {e}")
+    redis_client = None
 
 app = FastAPI()
 BASE_DIR = Path(__file__).parent
@@ -47,6 +55,15 @@ async def ingest(file: UploadFile = File(...)):
     # In production: push to cloud storage, emit a job to queue.
     return {"status":"uploaded","filename":file.filename}
 
+def calculate_file_hash(filepath: Path):
+    """Calculate MD5 hash of a file."""
+    hasher = hashlib.md5()
+    with open(filepath, "rb") as f:
+        # Read in chunks to avoid memory issues
+        for chunk in iter(lambda: f.read(4096), b""):
+            hasher.update(chunk)
+    return hasher.hexdigest()
+
 @app.post("/process/")
 async def process(filename: str = Form(...), background: BackgroundTasks = BackgroundTasks()):
     """
@@ -61,6 +78,43 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
         return {"status":"processing_failed", "error":"File not found"}
     audio_path = BASE_DIR / "audio.wav"
     transcript_path = BASE_DIR / "transcript.json"
+
+    # 1. Calculate Hash
+    file_hash = calculate_file_hash(filepath)
+    
+    # 2. Check Redis Cache
+    if redis_client:
+        try:
+            cached_transcript = redis_client.get(file_hash)
+            if cached_transcript:
+                print(f"Cache HIT for {filename}")
+                # Write cached transcript to file so existing flow works
+                with open(transcript_path, "w", encoding="utf-8") as f:
+                    f.write(cached_transcript)
+                
+                # We still need to run task extraction (it's fast), or we could cache that too?
+                # The user only asked for faster processing (implied transcription).
+                # The task extraction reads transcript.json, so we are good.
+                
+                # Trigger task extraction in background
+                def run_extract_tasks_cached():
+                    extract_script = BASE_DIR / "scripts" / "extract_tasks.py"
+                    try:
+                        env = os.environ.copy()
+                        subprocess.run(
+                            [sys.executable, str(extract_script), "transcript.json", "--meeting_date", "2025-12-01"],
+                            check=False,
+                            cwd=str(BASE_DIR),
+                            env=env
+                        )
+                    except Exception as e:
+                        print(f"Task extraction error: {str(e)}", file=sys.stderr)
+                
+                background.add_task(run_extract_tasks_cached)
+                
+                return {"status":"processing_completed", "cached": True}
+        except Exception as e:
+            print(f"Redis cache error: {e}")
     
     # Delete old transcript if it exists
     if transcript_path.exists():
@@ -121,6 +175,16 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
         if not transcript_path.exists(): 
             return {"status":"processing_failed", "error":"Transcription completed but transcript file was not created"}
         
+        # Cache the result in Redis
+        if redis_client:
+            try:
+                with open(transcript_path, "r", encoding="utf-8") as Tf:
+                    transcript_data = Tf.read()
+                redis_client.set(file_hash, transcript_data)
+                print(f"Cached transcript for {filename}")
+            except Exception as e:
+                print(f"Failed to cache transcript: {e}")
+
         # Extract tasks in a background task so we don't block /process latency.
         # This means the transcript becomes available first, and tasks.json shortly after.
         def run_extract_tasks():
