@@ -1,4 +1,5 @@
 [
+  
   {
     "email": "shagun.laneway@gmail.com",
     "name": "Shagun",
@@ -8,37 +9,307 @@
       "AI Research & Development Intern",
       "Tech Intern"
     ],
-    "skills": [
-      "Figma",
-      "UX"
+    "department": [
+      "AI Research & Development"
     ],
+    "contact": 9326359081,
     "capacity": 0.6
   },
   {
-    "email": "sankalp@company.com",
-    "name": "Sankalp",
+    "email": "harsha.laneway@gmail.com",
+    "name": "Harshavardhan",
     "roles": [
-      "Team Member"
+      "AI Intern",
+      "Developer",
+      "AI Research & Development Intern",
+      "Tech Intern"
     ],
-    "skills": [],
-    "capacity": 0.7
+    "department": [
+      "AI Research & Development"
+    ],
+    "contact": 9515200363,
+    "capacity": 0.6
   },
   {
-    "email": "jagen@company.com",
-    "name": "Jagen",
+    "email": "odenarendrareddy.laneway@gmail.com",
+    "name": "Narendra",
     "roles": [
-      "Team Member"
+      "AI Intern",
+      "Developer",
+      "AI Research & Development Intern",
+      "Tech Intern"
     ],
-    "skills": [],
-    "capacity": 0.7
+    "department": [
+      "AI Research & Development"
+    ],
+    "contact": 6304020928,
+    "capacity": 0.6
   },
   {
-    "email": "nirmal@company.com",
+    "email": "manishlaneway@gmail.com",
+    "name": "Manish",
+    "roles": [
+      "AI Intern",
+      "Operations",
+      "AI Research & Operations Intern",
+      "Tech Intern"
+    ],
+    "department": [
+      "AI Research & Development"
+    ],
+    "contact": 8139817262,
+    "capacity": 0.6
+  },
+  {
+    "email": "smriti.laneway@gmail.com",
+    "name": "Smriti",
+    "roles": [
+      "AI Intern",
+      "Developer",
+      "AI Research & Development Intern",
+      "Tech Intern"
+    ],
+    "department": [
+      "AI Research & Development"
+    ],
+    "contact": 7876601741,
+    "capacity": 0.6
+  },
+  {
+    "email": "hetbhutak.laneway@gmail.com",
+    "name": "Het",
+    "roles": [
+      "AI Intern",
+      "Developer",
+      "AI Research & Development Intern",
+      "Tech Intern"
+    ],
+    "department": [
+      "AI Research & Development"
+    ],
+    "contact": 7990513615,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "aaryalaneway@gmail.com",
+    "name": "Aarya",
+    "roles": [
+      "Social Media Intern"
+    ],
+    "department": [
+      "Social Media","Marketing"
+    ],
+    "contact": 7066033242,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "abhisheklaneway@gmail.com",
+    "name": "Abhishek",
+    "roles": [
+      "Social Media Intern",
+      "Marketing Intern"
+    ],
+    "department": [
+      "Social Media", "Marketing"
+    ],
+    "contact": 7988156251,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "harshitajoshi.laneway@gmail.com",
+    "name": "Harshita Joshi",
+    "roles": [
+      "Social Media Intern",
+      "Marketing Intern"
+    ],
+    "department": [
+      "Social Media", "Marketing"
+    ],
+    "contact": 7305588826,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "harshita.laneway@gmail.com",
+    "name": "Harshita Singh",
+    "roles": [
+      "Content Strategist Intern",
+      "Social Media Intern"
+    ],
+    "department": [
+      "Social Media"
+    ],
+    "contact": 7878600604,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "subhaaharini.laneway@gmail.com",
+    "name": "Subhaa Harini",
+    "roles": [
+      "Strategist Intern",
+      "Market Research Intern"
+    ],
+    "department": [
+      "Marketing"
+    ],
+    "contact": 8883485555,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "nirmal.laneway@gmail.com",
     "name": "Nirmal",
     "roles": [
-      "Team Member"
+      "Strategist Intern",
+      "Market Research Intern"
     ],
-    "skills": [],
-    "capacity": 0.7
+    "department": [
+      "Marketing"
+    ],
+    "contact": 8446541130,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "geraldina.laneway@gmail.com",
+    "name": "Geraldina George",
+    "roles": [
+      "HR Intern",
+      "Human Resources Intern"
+    ],
+    "department": [
+      "HR", "Human Resources"
+    ],
+    "contact": 9922872405,
+    "capacity": 0.6
+  },
+
+{
+    "email": "dheeraj.laneway@gmail.com",
+    "name": "Dheeraj",
+    "roles": [
+      "Business Development Admin",
+      "Business Analyst Intern"
+    ],
+    "department": [
+      "Business Development", "Business Analyst"
+    ],
+    "contact": 8618386647,
+    "capacity": 0.6
+  },
+
+  { 
+    "email": "jagens.laneway@gmail.com",
+    "name": "Jagen",
+    "roles": [
+      "Business Development Intern",
+      "Business Analyst Intern"
+    ],
+    "department": [
+      "Business Development", "Business Analyst"
+    ],
+    "contact": 9629342016,
+    "capacity": 0.6
+  },
+
+  {
+    "email": "sankalp.laneway@gmail.com",
+    "name": "Sankalp",
+    "roles": [
+      "Business Development Intern",
+      "Business Analyst Intern"
+    ],
+    "department": [
+      "Business Development", "Business Analyst"
+    ],
+    "contact": 9610212355,
+    "capacity": 0.6
+  },
+
+  
+  {
+    "email": "sevakularithanya.laneway@gmail.com",
+    "name": "Rithanya",
+    "roles": [
+      "Project Management Intern",
+      "Operations Intern"
+    ],
+    "department": [
+      "Operations", "Project Management"
+    ],
+    "contact": 9059089314,
+    "capacity": 0.6
+  },
+
+   {
+    "email": "bhavana.laneway@gmail.com",
+    "name": "Bhavana",
+    "roles": [
+      "Project Management Intern",
+      "Operations Intern"
+    ],
+    "department": [
+      "Operations", "Project Management"
+    ],
+    "contact": 7676480721,
+    "capacity": 0.6
+  },
+
+   {
+    "email": "shivani.laneway@gmail.com",
+    "name": "Shivani",
+    "roles": [
+      "Project Management Intern",
+      "Operations Intern"
+    ],
+    "department": [
+      "Operations", "Project Management"
+    ],
+    "contact": 8985761504,
+    "capacity": 0.6
+  },
+
+   {
+    "email": "mukul.laneway@gmail.com",
+    "name": "Mukul",
+    "roles": [
+      "Project Management Intern",
+      "Operations Intern"
+    ],
+    "department": [
+      "Operations", "Project Management"
+    ],
+    "contact": 8755728281,
+    "capacity": 0.6
+  },
+
+   {
+    "email": "gokul.laneway@gmail.com",
+    "name": "Gokul",
+    "roles": [
+      "CEO"
+    ],
+    "department": [
+      "Company"
+    ],
+    "contact": 9961348942,
+    "capacity": 0.6
+  },
+
+   {
+    "email": "coo.laneway@gmail.com",
+    "name": "Vaishnav",
+    "roles": [
+      "COO"
+    ],
+    "department": [
+      "Company"
+    ],
+    "contact": 8921348942,
+    "capacity": 0.6
   }
 ]
