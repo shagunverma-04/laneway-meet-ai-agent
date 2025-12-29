@@ -2,22 +2,43 @@
   {
     "email": "shagun.laneway@gmail.com",
     "name": "Shagun",
-    "roles": ["AI Intern","Developer","AI Research & Development Intern","Tech Intern"],
-    "skills": ["Figma","UX"],
+    "roles": [
+      "AI Intern",
+      "Developer",
+      "AI Research & Development Intern",
+      "Tech Intern"
+    ],
+    "skills": [
+      "Figma",
+      "UX"
+    ],
     "capacity": 0.6
   },
   {
-    "email": "bob@company",
-    "name": "Bob",
-    "roles": ["Backend Engineer"],
-    "skills": ["Python","Postgres"],
+    "email": "sankalp@company.com",
+    "name": "Sankalp",
+    "roles": [
+      "Team Member"
+    ],
+    "skills": [],
     "capacity": 0.7
   },
   {
-    "email": "alice@company",
-    "name": "Alice",
-    "roles": ["Product Manager"],
-    "skills": ["Roadmap","Prioritization"],
-    "capacity": 0.5
+    "email": "jagen@company.com",
+    "name": "Jagen",
+    "roles": [
+      "Team Member"
+    ],
+    "skills": [],
+    "capacity": 0.7
+  },
+  {
+    "email": "nirmal@company.com",
+    "name": "Nirmal",
+    "roles": [
+      "Team Member"
+    ],
+    "skills": [],
+    "capacity": 0.7
   }
 ]

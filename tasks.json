@@ -1,1 +1,146 @@
-[]
+[
+  {
+    "text": "Sangal needs to research the company details for the client 'Smash', including founders, CEO, company base, operations, history, and registration status.",
+    "assignee": "Sangal",
+    "role": null,
+    "deadline": null,
+    "priority": "High",
+    "confidence": 1.0
+  },
+  {
+    "text": "Jagan, Sangal, and Normal must research and compute pricing for various services.",
+    "assignee": "Jagan, Sangal, Normal",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "Jagan needs to consolidate all the discussed research points.",
+    "assignee": "Jagan",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "Normal and Sangal must note down all discussed points and outline the next steps.",
+    "assignee": "Normal, Sangal",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "All team members should identify potential clients with issues from any industry globally and provide their names and email addresses for outreach.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "Jagan and Sangal need to collect data on new gifting startups.",
+    "assignee": "Jagan, Sangal",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "Katie needs to build and expand the team by hiring more members.",
+    "assignee": "Katie",
+    "role": null,
+    "deadline": null,
+    "priority": "High",
+    "confidence": 1.0
+  },
+  {
+    "text": "Sangal must type the meeting discussions into ChatGPT.",
+    "assignee": "Sangal",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "Manish should use Perplexity for research tasks.",
+    "assignee": "Manish",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "Praveen should use Gemini for research tasks.",
+    "assignee": "Praveen",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "The team must create a comprehensive three-month strategy and budget plan, including financial targets and client acquisition plans.",
+    "assignee": null,
+    "role": null,
+    "deadline": "2025-12-08",
+    "priority": "High",
+    "confidence": 1.0
+  },
+  {
+    "text": "The team needs to discuss the financial plan with AKK.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "High",
+    "confidence": 1.0
+  },
+  {
+    "text": "All team members must submit their one-week worksheet.",
+    "assignee": null,
+    "role": null,
+    "deadline": "2025-12-02",
+    "priority": "High",
+    "confidence": 1.0
+  },
+  {
+    "text": "Sangal and Jagan must ensure all other assigned work is completed.",
+    "assignee": "Sangal, Jagan",
+    "role": null,
+    "deadline": "2025-12-02",
+    "priority": "High",
+    "confidence": 1.0
+  },
+  {
+    "text": "Normal needs to find more potential clients and opportunities.",
+    "assignee": "Normal",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "Manish must inform HR not to send meeting links in group chats.",
+    "assignee": "Manish",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 1.0
+  },
+  {
+    "text": "KK, Jagan, Sangal, and Pandore must continue the meeting and discuss any remaining details or questions.",
+    "assignee": "KK, Jagan, Sangal, Pandore",
+    "role": null,
+    "deadline": null,
+    "priority": "High",
+    "confidence": 1.0
+  },
+  {
+    "text": "Sangal needs to share the research document containing pricing data.",
+    "assignee": "Sangal",
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  }
+]

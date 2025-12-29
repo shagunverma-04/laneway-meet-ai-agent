@@ -1,6 +1,7 @@
 # Minimal transcription script.
 # Supports local Whisper if installed, else falls back to OpenAI Whisper API.
 import argparse, json, os, sys
+from pathlib import Path
 from tqdm import tqdm
 
 # Try to load .env file if python-dotenv is available
@@ -10,7 +11,28 @@ try:
 except ImportError:
     pass  # python-dotenv not installed, that's okay
 
-def whisper_transcribe_local(audio_path, model_name="small"):
+def load_employee_names():
+    """Load employee names from employees.json to use as Whisper hints."""
+    try:
+        # Try to find employees.json in the project root
+        base_dir = Path(__file__).parent.parent
+        employees_file = base_dir / "employees.json"
+        
+        if not employees_file.exists():
+            print("employees.json not found, skipping name hints")
+            return []
+        
+        with open(employees_file, 'r') as f:
+            employees = json.load(f)
+        
+        names = [emp.get("name") for emp in employees if emp.get("name")]
+        print(f"Loaded {len(names)} employee names for transcription hints: {', '.join(names)}")
+        return names
+    except Exception as e:
+        print(f"Warning: Could not load employee names: {e}")
+        return []
+
+def whisper_transcribe_local(audio_path, model_name="small", prompt_hints=None):
     """Transcribe using local Faster-Whisper model (Optimized for speed)."""
     print(f"Loading Faster-Whisper model: {model_name}...")
     try:
@@ -29,7 +51,13 @@ def whisper_transcribe_local(audio_path, model_name="small"):
         model = whisper.load_model(model_name)
         device = "cuda" if torch.cuda.is_available() else "cpu"
         print(f"Transcribing with STANDARD whisper model: {model_name} on {device.upper()}")
-        result = model.transcribe(audio_path, language='en')
+        
+        # Add initial_prompt with employee names to improve recognition
+        transcribe_kwargs = {"language": "en"}
+        if prompt_hints:
+            transcribe_kwargs["initial_prompt"] = f"Meeting with: {', '.join(prompt_hints)}."
+        
+        result = model.transcribe(audio_path, **transcribe_kwargs)
         transcript = []
         for seg in result.get("segments", []):
             transcript.append({"start": seg["start"], "end": seg["end"], "text": seg["text"]})
@@ -43,7 +71,13 @@ def whisper_transcribe_local(audio_path, model_name="small"):
     
     try:
         model = WhisperModel(model_name, device=device, compute_type=compute_type)
-        segments, info = model.transcribe(audio_path, beam_size=5, language="en")
+        
+        # Add initial_prompt with employee names to improve recognition
+        transcribe_kwargs = {"beam_size": 5, "language": "en"}
+        if prompt_hints:
+            transcribe_kwargs["initial_prompt"] = f"Meeting with: {', '.join(prompt_hints)}."
+        
+        segments, info = model.transcribe(audio_path, **transcribe_kwargs)
         
         transcript = []
         # segments is a generator, so iterating processes the audio
@@ -59,10 +93,15 @@ def whisper_transcribe_local(audio_path, model_name="small"):
         # Fallback copy-paste from above (simplified)
         import whisper
         model = whisper.load_model(model_name)
-        result = model.transcribe(audio_path, language='en')
+        
+        transcribe_kwargs = {"language": "en"}
+        if prompt_hints:
+            transcribe_kwargs["initial_prompt"] = f"Meeting with: {', '.join(prompt_hints)}."
+        
+        result = model.transcribe(audio_path, **transcribe_kwargs)
         return [{"start": s["start"], "end": s["end"], "text": s["text"]} for s in result.get("segments", [])]
 
-def whisper_transcribe_openai(audio_path):
+def whisper_transcribe_openai(audio_path, prompt_hints=None):
     """Transcribe using OpenAI Whisper API."""
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
@@ -88,12 +127,20 @@ def whisper_transcribe_openai(audio_path):
             from io import BytesIO
             audio_file = BytesIO(audio_file_content)
             audio_file.name = os.path.basename(audio_path)
-            transcript_obj = client.audio.transcriptions.create(
-                model="whisper-1",
-                file=audio_file,
-                response_format="verbose_json",
-                timestamp_granularities=["segment"]
-            )
+            
+            # Build API call parameters
+            api_params = {
+                "model": "whisper-1",
+                "file": audio_file,
+                "response_format": "verbose_json",
+                "timestamp_granularities": ["segment"]
+            }
+            
+            # Add prompt with employee names if available
+            if prompt_hints:
+                api_params["prompt"] = f"Meeting with: {', '.join(prompt_hints)}."
+            
+            transcript_obj = client.audio.transcriptions.create(**api_params)
         except Exception as e1:
             # Fallback to simple json if verbose_json not supported
             print(f"verbose_json failed, trying json: {e1}")
@@ -230,7 +277,7 @@ def whisper_transcribe_openai(audio_path):
         except Exception as e:
             raise RuntimeError(f"Failed to use OpenAI API (tried both new and old styles): {e}")
 
-def whisper_transcribe(audio_path, model_name="small"):
+def whisper_transcribe(audio_path, model_name="small", employee_names=None):
     """
     Transcribe audio. Prioritizes OpenAI API (faster, cloud-based) if available,
     falls back to local Whisper if API key is not set or API fails.
@@ -239,13 +286,13 @@ def whisper_transcribe(audio_path, model_name="small"):
     if os.environ.get("OPENAI_API_KEY"):
         try:
             print("Attempting transcription with OpenAI Whisper API (faster, cloud-based)...")
-            return whisper_transcribe_openai(audio_path)
+            return whisper_transcribe_openai(audio_path, prompt_hints=employee_names)
         except Exception as e:
             print(f"OpenAI API failed ({e}), falling back to local Whisper...", file=sys.stderr)
             # Fall through to local Whisper
     
     # Fallback to local Whisper (slower but works offline)
-    return whisper_transcribe_local(audio_path, model_name)
+    return whisper_transcribe_local(audio_path, model_name, prompt_hints=employee_names)
 
 def save_transcript(transcript, out="transcript.json"):
     with open(out, "w") as f:
@@ -258,8 +305,12 @@ if __name__ == "__main__":
     parser.add_argument("--model", default="small", help="whisper model name")
     parser.add_argument("--allow-fallback", action="store_true", help="Allow fallback to dummy transcript if Whisper fails")
     args = parser.parse_args()
+    
+    # Load employee names for better name recognition
+    employee_names = load_employee_names()
+    
     try:
-        transcript = whisper_transcribe(args.audio, args.model)
+        transcript = whisper_transcribe(args.audio, args.model, employee_names=employee_names)
     except Exception as e:
         # Only fallback if explicitly allowed
         if args.allow_fallback:
