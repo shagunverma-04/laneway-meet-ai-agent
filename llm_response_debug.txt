@@ -1,3 +1,4 @@
+```json
 [
   {
     "text": "Sankalp must research and check the company details for the client, Smash.",
@@ -149,22 +150,3 @@
     "role": null,
     "deadline": null,
     "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen needs to add the sources to the pricing and research document.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen will create a PDF or PowerPoint presentation of the research and pricing data to present to Gokul.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  }
-]

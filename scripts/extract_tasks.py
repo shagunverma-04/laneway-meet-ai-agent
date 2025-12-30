@@ -4,6 +4,14 @@
 import argparse, os, json, time, sys, requests
 from pathlib import Path
 
+# Try to load .env file if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, that's okay
+
+
 PROMPT_TEMPLATE = '''You are an expert AI meeting assistant.
 Your goal is to extract **meaningful, actionable tasks** from the meeting transcript below.
 
@@ -76,7 +84,7 @@ def call_gemini(prompt, model="gemini-2.5-flash"):
         model_instance = genai.GenerativeModel(model)
         response = model_instance.generate_content(
             prompt,
-            generation_config={"temperature": 0.0, "max_output_tokens": 8192}
+            generation_config={"temperature": 0.0, "max_output_tokens": 16384}
         )
         return response.text
     except Exception as e:
@@ -196,44 +204,156 @@ if __name__ == "__main__":
     )
     
     out = None
+    errors = []
+    
     # 1. Try Gemini
     try:
         print("Attempting extraction with Gemini...", file=sys.stdout)
+        gemini_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+        if not gemini_key:
+            raise RuntimeError("No Gemini API key found. Set GOOGLE_API_KEY or GEMINI_API_KEY environment variable.")
         out = call_gemini(prompt)
-        print("Gemini Success!", file=sys.stdout)
+        print("✓ Gemini Success!", file=sys.stdout)
     except Exception as e:
-        print(f"Gemini failed: {e}", file=sys.stderr)
+        error_msg = f"Gemini failed: {e}"
+        print(error_msg, file=sys.stderr)
+        errors.append(error_msg)
         
         # 2. Try OpenAI
         try:
-            print("Attempting extraction with OpenAI...", file=sys.stdout)
+            print("\nAttempting extraction with OpenAI...", file=sys.stdout)
+            openai_key = os.environ.get("OPENAI_API_KEY")
+            if not openai_key:
+                raise RuntimeError("No OpenAI API key found. Set OPENAI_API_KEY environment variable.")
             out = call_openai_fallback(prompt)
-            print("OpenAI Success!", file=sys.stdout)
+            print("✓ OpenAI Success!", file=sys.stdout)
         except Exception as e2:
-            print(f"OpenAI failed: {e2}", file=sys.stderr)
+            error_msg = f"OpenAI failed: {e2}"
+            print(error_msg, file=sys.stderr)
+            errors.append(error_msg)
             
             # 3. Try Ollama (Local)
             try:
-                print("Attempting extraction with Ollama (Local Llama 3)...", file=sys.stdout)
+                print("\nAttempting extraction with Ollama (Local Llama 3)...", file=sys.stdout)
                 out = call_ollama_fallback(prompt)
-                print("Ollama Success!", file=sys.stdout)
+                print("✓ Ollama Success!", file=sys.stdout)
             except Exception as e3:
-                print(f"Ollama failed: {e3}", file=sys.stderr)
-                print("ALL LLM methods failed.", file=sys.stderr)
+                error_msg = f"Ollama failed: {e3}"
+                print(error_msg, file=sys.stderr)
+                errors.append(error_msg)
+                
+                # All methods failed - print comprehensive error
+                print("\n" + "="*60, file=sys.stderr)
+                print("✗ ALL LLM METHODS FAILED", file=sys.stderr)
+                print("="*60, file=sys.stderr)
+                print("\nErrors encountered:", file=sys.stderr)
+                for i, err in enumerate(errors, 1):
+                    print(f"{i}. {err}", file=sys.stderr)
+                
+                print("\n" + "-"*60, file=sys.stderr)
+                print("SOLUTIONS:", file=sys.stderr)
+                print("-"*60, file=sys.stderr)
+                
+                # Check which keys are set
+                has_gemini = bool(os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY"))
+                has_openai = bool(os.environ.get("OPENAI_API_KEY"))
+                
+                print(f"\nAPI Keys Status:", file=sys.stderr)
+                print(f"  Gemini: {'✓ SET' if has_gemini else '✗ NOT SET'}", file=sys.stderr)
+                print(f"  OpenAI: {'✓ SET' if has_openai else '✗ NOT SET'}", file=sys.stderr)
+                
+                print(f"\nTo fix this issue, choose ONE of these options:", file=sys.stderr)
+                print(f"  1. Set up Gemini (FREE): Get API key from https://aistudio.google.com/app/apikey", file=sys.stderr)
+                print(f"     Then set: GOOGLE_API_KEY=your-key-here in .env file", file=sys.stderr)
+                print(f"  2. Set up OpenAI: Get API key from https://platform.openai.com/account/api-keys", file=sys.stderr)
+                print(f"     Then set: OPENAI_API_KEY=sk-... in .env file", file=sys.stderr)
+                print(f"  3. Install Ollama (FREE, Local): Download from https://ollama.ai", file=sys.stderr)
+                print(f"     Then run: ollama pull llama3.2", file=sys.stderr)
+                print("="*60 + "\n", file=sys.stderr)
 
     tasks = []
     if out:
-        print(f"RAW LLM RESPONSE:\n{out[:1000]}...", file=sys.stdout)
+        print(f"RAW LLM RESPONSE (first 1000 chars):\n{out[:1000]}...", file=sys.stdout)
+        print(f"\nRAW LLM RESPONSE (last 500 chars):\n...{out[-500:]}", file=sys.stdout)
+        
         try:
             import re
-            m = re.search(r'\[.*\]', out, re.S)
-            arr_text = m.group(0) if m else out
+            # Try to extract JSON from markdown code blocks first
+            # Pattern 1: ```json ... ```
+            json_match = re.search(r'```json\s*(.*?)\s*```', out, re.S | re.I)
+            if json_match:
+                arr_text = json_match.group(1).strip()
+                print("Found JSON in markdown code block", file=sys.stdout)
+            else:
+                # Pattern 2: ``` ... ``` (without language specifier)
+                code_match = re.search(r'```\s*(.*?)\s*```', out, re.S)
+                if code_match:
+                    arr_text = code_match.group(1).strip()
+                    print("Found code in markdown block", file=sys.stdout)
+                else:
+                    # Pattern 3: Just find the JSON array
+                    array_match = re.search(r'\[.*\]', out, re.S)
+                    arr_text = array_match.group(0) if array_match else out
+                    print("Extracted JSON array from response", file=sys.stdout)
+            
             tasks = json.loads(arr_text)
-            print(f"Successfully parsed {len(tasks)} tasks", file=sys.stdout)
+            print(f"\n✓ Successfully parsed {len(tasks)} tasks", file=sys.stdout)
+            
+            # Print each task for verification
+            for i, task in enumerate(tasks, 1):
+                print(f"\nTask {i}:", file=sys.stdout)
+                print(f"  Text: {task.get('text', 'N/A')}", file=sys.stdout)
+                print(f"  Assignee: {task.get('assignee', 'N/A')}", file=sys.stdout)
+                print(f"  Priority: {task.get('priority', 'N/A')}", file=sys.stdout)
+                print(f"  Deadline: {task.get('deadline', 'N/A')}", file=sys.stdout)
+                
+        except json.JSONDecodeError as e:
+            print(f"\n✗ JSON Parsing failed: {e}", file=sys.stderr)
+            print(f"Attempting to repair incomplete JSON...", file=sys.stderr)
+            
+            # Try to repair incomplete JSON by adding missing closing brackets
+            try:
+                # Count opening and closing brackets
+                open_braces = arr_text.count('{')
+                close_braces = arr_text.count('}')
+                open_brackets = arr_text.count('[')
+                close_brackets = arr_text.count(']')
+                
+                # Add missing closing brackets
+                repaired_text = arr_text
+                if close_braces < open_braces:
+                    repaired_text += '\n' + ('  }' * (open_braces - close_braces))
+                if close_brackets < open_brackets:
+                    repaired_text += '\n' + (']' * (open_brackets - close_brackets))
+                
+                # Try parsing the repaired JSON
+                tasks = json.loads(repaired_text)
+                print(f"✓ Successfully repaired and parsed {len(tasks)} tasks from incomplete response", file=sys.stdout)
+                
+                # Print each task for verification
+                for i, task in enumerate(tasks, 1):
+                    print(f"\nTask {i}:", file=sys.stdout)
+                    print(f"  Text: {task.get('text', 'N/A')}", file=sys.stdout)
+                    print(f"  Assignee: {task.get('assignee', 'N/A')}", file=sys.stdout)
+                    print(f"  Priority: {task.get('priority', 'N/A')}", file=sys.stdout)
+                    print(f"  Deadline: {task.get('deadline', 'N/A')}", file=sys.stdout)
+                    
+            except Exception as repair_error:
+                print(f"✗ JSON repair failed: {repair_error}", file=sys.stderr)
+                print(f"Failed to parse text (first 500 chars):\n{arr_text[:500] if 'arr_text' in locals() else 'N/A'}", file=sys.stderr)
+                # Save the raw response for debugging
+                debug_path = os.path.abspath('llm_response_debug.txt')
+                with open(debug_path, 'w', encoding='utf-8') as df:
+                    df.write(out)
+                print(f"Saved raw LLM response to {debug_path} for debugging", file=sys.stderr)
         except Exception as e:
-            print(f"JSON Parsing failed: {e}", file=sys.stderr)
+            print(f"\n✗ Unexpected error during parsing: {e}", file=sys.stderr)
+    else:
+        print("\n✗ No LLM response received - all methods failed", file=sys.stderr)
     
     tasks_path = os.path.abspath('tasks.json')
     with open(tasks_path, 'w', encoding='utf-8') as f:
-        json.dump(tasks, f, indent=2)
-    print(f"Wrote tasks.json to {tasks_path} with {len(tasks)} items", file=sys.stdout)
+        json.dump(tasks, f, indent=2, ensure_ascii=False)
+    print(f"\n{'='*60}", file=sys.stdout)
+    print(f"Wrote {len(tasks)} tasks to {tasks_path}", file=sys.stdout)
+    print(f"{'='*60}", file=sys.stdout)
