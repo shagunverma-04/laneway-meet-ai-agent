@@ -44,6 +44,7 @@ app.add_middleware(
 )
 
 @app.get("/")
+@app.head("/")  # Support HEAD requests for health checks
 async def read_root():
     """Serve the index.html file at the root path."""
     index_path = BASE_DIR / "index.html"
