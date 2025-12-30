@@ -11,12 +11,24 @@ try:
 except ImportError:
     pass  # python-dotenv not installed, that's okay.
 
-# Initialize Redis client
+# Initialize Redis client (optional - for caching)
 # We use decode_responses=True so we get strings instead of bytes
+redis_client = None
 try:
-    redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+    # Get Redis URL from environment variable, default to localhost for local dev
+    redis_url = os.environ.get('REDIS_URL', 'redis://localhost:6379')
+    
+    # Parse Redis URL if it's a full URL
+    if redis_url.startswith('redis://'):
+        redis_client = redis.from_url(redis_url, decode_responses=True)
+    else:
+        redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+    
+    # Test the connection
+    redis_client.ping()
+    print("✓ Redis connected successfully")
 except Exception as e:
-    print(f"Redis init warning: {e}")
+    print(f"⚠ Redis not available (caching disabled): {e}")
     redis_client = None
 
 app = FastAPI()
@@ -73,21 +85,26 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
     - Do audio extraction + transcription synchronously (so the user gets the transcript quickly).
     - Run task extraction in a FastAPI BackgroundTask so we don't block the response.
     """
+    print(f"[PROCESS] Starting processing for: {filename}")
     filepath = BASE_DIR / filename
     if not filepath.exists():
+        print(f"[PROCESS] ERROR: File not found: {filepath}")
         return {"status":"processing_failed", "error":"File not found"}
     audio_path = BASE_DIR / "audio.wav"
     transcript_path = BASE_DIR / "transcript.json"
 
     # 1. Calculate Hash
+    print(f"[PROCESS] Calculating file hash...")
     file_hash = calculate_file_hash(filepath)
+    print(f"[PROCESS] File hash: {file_hash}")
     
     # 2. Check Redis Cache
     if redis_client:
         try:
+            print(f"[PROCESS] Checking Redis cache...")
             cached_transcript = redis_client.get(file_hash)
             if cached_transcript:
-                print(f"Cache HIT for {filename}")
+                print(f"[PROCESS] Cache HIT for {filename}")
                 # Write cached transcript to file so existing flow works
                 with open(transcript_path, "w", encoding="utf-8") as f:
                     f.write(cached_transcript)
@@ -114,7 +131,7 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
                 
                 return {"status":"processing_completed", "cached": True}
         except Exception as e:
-            print(f"Redis cache error: {e}")
+            print(f"[PROCESS] Redis cache error: {e}")
     
     # Delete old transcript if it exists
     if transcript_path.exists():
@@ -122,6 +139,7 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
     
     try:
         # extract audio
+        print(f"[PROCESS] Extracting audio with ffmpeg...")
         ffmpeg_result = subprocess.run(
             ["ffmpeg","-y","-i", str(filepath), "-vn","-acodec","pcm_s16le","-ar","16000","-ac","1", str(audio_path)], 
             check=False,
@@ -129,9 +147,12 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
             text=True
         )
         if ffmpeg_result.returncode != 0:
+            print(f"[PROCESS] ERROR: Audio extraction failed")
             return {"status":"processing_failed", "error":f"Audio extraction failed: {ffmpeg_result.stderr[:200]}"}
         
+        print(f"[PROCESS] Audio extracted successfully")
         # transcribe (calls script)
+        print(f"[PROCESS] Starting transcription...")
         transcribe_script = BASE_DIR / "scripts" / "transcribe.py"
         # Ensure environment variables are passed to subprocess and use the same Python interpreter
         # Use "base" model for better accuracy (GPU can handle it efficiently)
@@ -146,6 +167,7 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
         )
         if transcribe_result.returncode != 0:
             # Transcription failed, ensure transcript.json doesn't exist
+            print(f"[PROCESS] ERROR: Transcription failed")
             if transcript_path.exists():
                 transcript_path.unlink()
             # Combine both stdout and stderr for better error messages
@@ -171,19 +193,22 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
                 "error":f"Transcription failed: {error_msg[:800]}. API Key Set: {api_key_set}, Whisper Installed: {whisper_installed}"
             }
         
+        print(f"[PROCESS] Transcription completed successfully")
         # Verify transcript was created
-        if not transcript_path.exists(): 
+        if not transcript_path.exists():
+            print(f"[PROCESS] ERROR: Transcript file not created")
             return {"status":"processing_failed", "error":"Transcription completed but transcript file was not created"}
         
         # Cache the result in Redis
         if redis_client:
             try:
+                print(f"[PROCESS] Caching transcript in Redis...")
                 with open(transcript_path, "r", encoding="utf-8") as Tf:
                     transcript_data = Tf.read()
                 redis_client.set(file_hash, transcript_data)
-                print(f"Cached transcript for {filename}")
+                print(f"[PROCESS] Cached transcript for {filename}")
             except Exception as e:
-                print(f"Failed to cache transcript: {e}")
+                print(f"[PROCESS] Failed to cache transcript: {e}")
 
         # Extract tasks in a background task so we don't block /process latency.
         # This means the transcript becomes available first, and tasks.json shortly after.
@@ -208,8 +233,10 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
 
         background.add_task(run_extract_tasks)
         
+        print(f"[PROCESS] Processing completed successfully for {filename}")
         return {"status":"processing_completed"}
     except Exception as e:
+        print(f"[PROCESS] FATAL ERROR: {str(e)}")
         return {"status":"processing_failed", "error":f"Processing error: {str(e)}"}
 
 @app.get("/health")

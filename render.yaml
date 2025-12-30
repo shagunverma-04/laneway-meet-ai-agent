@@ -1,4 +1,12 @@
 services:
+  # Redis for caching transcripts
+  - type: redis
+    name: laneway-redis
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: allkeys-lru
+
+  # Main web service
   - type: web
     name: laneway-meet-ai-agent
     runtime: python
@@ -11,3 +19,8 @@ services:
         sync: false
       - key: GOOGLE_API_KEY
         sync: false
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: laneway-redis
+          property: connectionString
