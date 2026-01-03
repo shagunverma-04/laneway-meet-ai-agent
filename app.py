@@ -229,6 +229,14 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
                     print(f"Task extraction failed: {result.stderr}", file=sys.stderr)
                 else:
                     print(f"Task extraction completed successfully", file=sys.stdout)
+                    
+                    # Auto-sync to Notion if enabled
+                    try:
+                        from notion_sync_helper import sync_tasks_to_notion
+                        sync_tasks_to_notion()
+                    except Exception as e:
+                        print(f"[NOTION] Sync failed: {e}", file=sys.stderr)
+                        
             except Exception as e:
                 print(f"Task extraction error: {str(e)}", file=sys.stderr)
 
