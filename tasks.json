@@ -1,170 +1,202 @@
 [
   {
-    "text": "Sankalp must research and check the company details for the client, Smash.",
-    "assignee": "Sankalp",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen, Sankalp, and Nirmal need to research price computations for the client.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Sankalp, Jagen, and Nirmal must note down all discussion points and plan the next steps for the client.",
-    "assignee": "Nirmal",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen needs to understand the core team's activities and strategic plans.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.8
-  },
-  {
-    "text": "Nirmal is responsible for developing a comprehensive strategy for client acquisition, including services for a one-week trial, sales, marketing, core team business, and system building.",
-    "assignee": "Nirmal",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Sankalp needs to verify if the client 'Smash' is officially registered.",
-    "assignee": "Sankalp",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen and Sankalp are required to gather data on new startups within the gifting market.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "The business administration team needs to focus on building and expanding the team.",
-    "assignee": null,
-    "role": "Business Administration Team",
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.7
-  },
-  {
-    "text": "Sankalp should input the discussed points into ChatGPT to generate pitch ideas.",
-    "assignee": "Sankalp",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Nirmal should query ChatGPT about Laneway to assess the information it provides.",
-    "assignee": "Nirmal",
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.8
-  },
-  {
-    "text": "Manish should utilize Perplexity for his research tasks.",
-    "assignee": "Manish",
-    "role": null,
-    "deadline": null,
-    "priority": "Medium",
-    "confidence": 0.8
-  },
-  {
-    "text": "The team needs to write a case study detailing how Laneway assisted a client, such as 'Smash'.",
+    "text": "The person responsible for the off-boarding document must add the website link to it.",
     "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
-    "confidence": 0.7
-  },
-  {
-    "text": "The team must create a three-month strategy, including budget planning, client acquisition plans, and outreach approaches, by next week.",
-    "assignee": null,
-    "role": null,
-    "deadline": "2025-12-08",
-    "priority": "High",
-    "confidence": 0.8
-  },
-  {
-    "text": "Sankalp and Jagen must ensure all their assigned work is completed and prepare for the meeting scheduled for tomorrow.",
-    "assignee": "Sankalp",
-    "role": null,
-    "deadline": "2025-12-02",
-    "priority": "High",
     "confidence": 0.9
   },
   {
-    "text": "Nirmal should proactively identify and track additional potential clients or opportunities.",
-    "assignee": "Nirmal",
+    "text": "The person responsible for the off-boarding document must add details regarding hosting access and account transfers.",
+    "assignee": null,
     "role": null,
     "deadline": null,
     "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person responsible for the off-boarding document must ensure all relevant account details, including Firebase, hosting, Gmail, Google Drive, and dashboard information, are included.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person responsible for the off-boarding document must add a section for 'All Deliverable Submission Status'.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person responsible for the off-boarding document must create an input box or designated space for adding notes or status updates.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person working on the off-boarding process must create a separate feedback form.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person working on the off-boarding process must share the feedback form (or its link/PNG format) by end of day.",
+    "assignee": null,
+    "role": null,
+    "deadline": "2025-12-01",
+    "priority": "High",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person working on the off-boarding process must prepare one more letter related to client communication.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person working on the off-boarding process must complete the off-boarding document by Sunday.",
+    "assignee": null,
+    "role": null,
+    "deadline": "2025-12-07",
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person responsible for the off-boarding document must encrypt it (PDF or Word) to require a password for opening.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "High",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must send all access details and passwords to the manager by today evening.",
+    "assignee": null,
+    "role": null,
+    "deadline": "2025-12-01",
+    "priority": "High",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must structure the received access details and passwords and send them back by 9 or 10 PM tonight.",
+    "assignee": null,
+    "role": null,
+    "deadline": "2025-12-01",
+    "priority": "High",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must share the developer's work, including the project report and summary of work, with relevant parties.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must share the message regarding the developer's work or requirements in the group chat.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must copy the relevant information (developer's work/requirements) and send it to the manager.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must create a new document with an open link, copying the relevant developer information.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must add designated spaces or boxes for developers to add their work summary and outcomes.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must share the document with an open link, ensuring it does not have restricted access.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must create a table format within the document for easier data entry.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must share the updated document (with the new table format) with the manager.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding process must obtain updates from the developer regarding their completed work.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The developer must complete their assigned work and share it with the person managing the off-boarding document.",
+    "assignee": null,
+    "role": "Developer",
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding document must share the requirements or document with the developer.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The person managing the off-boarding process is responsible for overseeing developer updates and document sharing.",
+    "assignee": null,
+    "role": null,
+    "deadline": null,
+    "priority": "Medium",
+    "confidence": 0.9
+  },
+  {
+    "text": "The quick meeting should be scheduled for 3 PM or later, after the 2 PM common meeting concludes.",
+    "assignee": null,
+    "role": null,
+    "deadline": "2025-12-01",
+    "priority": "Medium",
     "confidence": 0.8
-  },
-  {
-    "text": "Manish is responsible for instructing HR to send meeting links directly to individuals rather than in group chats.",
-    "assignee": "Manish",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen and Sankalp need to continue the meeting and discuss any outstanding questions or details.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen must share the document containing the research and pricing data.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen is to present the research and pricing data to the team.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen needs to add the sources to the pricing and research document.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
-  },
-  {
-    "text": "Jagen will create a PDF or PowerPoint presentation of the research and pricing data to present to Gokul.",
-    "assignee": "Jagen",
-    "role": null,
-    "deadline": null,
-    "priority": "High",
-    "confidence": 0.9
   }
 ]

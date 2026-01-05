@@ -119,12 +119,23 @@ async def process(filename: str = Form(...), background: BackgroundTasks = Backg
                     extract_script = BASE_DIR / "scripts" / "extract_tasks.py"
                     try:
                         env = os.environ.copy()
-                        subprocess.run(
+                        result = subprocess.run(
                             [sys.executable, str(extract_script), "transcript.json", "--meeting_date", "2025-12-01"],
                             check=False,
                             cwd=str(BASE_DIR),
-                            env=env
+                            env=env,
+                            capture_output=True,
+                            text=True
                         )
+                        if result.returncode == 0:
+                            print(f"Task extraction completed successfully (cached)", file=sys.stdout)
+                            
+                            # Auto-sync to Notion if enabled
+                            try:
+                                from notion_sync_helper import sync_tasks_to_notion
+                                sync_tasks_to_notion()
+                            except Exception as e:
+                                print(f"[NOTION] Sync failed: {e}", file=sys.stderr)
                     except Exception as e:
                         print(f"Task extraction error: {str(e)}", file=sys.stderr)
                 

@@ -18,6 +18,15 @@ __pycache__/
 *.wav
 *.mp3
 
+# Google OAuth Credentials
+credentials.json
+token.json
+
+# Automation Files
+recordings/
+processed_recordings.json
+automation_log.json
+
 # OS
 .DS_Store
 Thumbs.db

@@ -12,8 +12,12 @@ A powerful, AI-driven web application designed to streamline post-meeting workfl
 - **🚀 Smart Transcription**: Uses **Faster-Whisper** for high-performance, local speech-to-text conversion. Capable of running heavily optimized inference on CPU/GPU.
 - **⚡ Intelligent Caching**: Integrated **Redis** caching layer ensures that previously processed files are retrieved instantly, saving time and compute resources.
 - **📝 Action Item Extraction**: Leverages LLMs (OpenAI GPT) to parse transcripts and extract concrete tasks, deadlines, and owners.
+- **🤖 Google Drive Automation**: Automatically pulls daily meeting recordings from Google Drive folders.
+- **📤 Notion Integration**: Syncs extracted tasks to department-specific Notion databases automatically.
+- **⏰ Scheduled Processing**: Set it and forget it - runs daily at your preferred time.
 - **🎨 Modern UI**: A sleek, responsive dark-mode web interface for easy file uploads and result viewing.
 - **📂 Wide Format Support**: Ingests `mp4`, `wav`, and other common media formats via `ffmpeg`.
+
 
 ## 🛠️ Tech Stack
 
@@ -85,10 +89,30 @@ The application is container-ready and includes a `Dockerfile`.
 
 ## 📂 Project Structure
 
-- `app.py`: Main FastAPI application and API endpoints.
 - `scripts/transcribe.py`: Logic for Whisper transcription (supports Local & API).
 - `scripts/extract_tasks.py`: LLM-based task extraction logic.
+- `scripts/sync_to_notion.py`: Notion database integration.
+- `scripts/google_drive_sync.py`: Google Drive automation.
+- `scripts/daily_automation.py`: Complete automation workflow.
 - `index.html` & `styles.css`: Frontend user interface.
 - `requirements.txt`: Project dependencies.
 
+## 🤖 Automation
+
+### Quick Start
+```bash
+# Run setup wizard
+python setup.py
+
+# Test automation
+python scripts/scheduler.py --run-now
+
+# Schedule daily at 9 AM
+python scripts/scheduler.py --time 09:00
+```
+
+### Documentation
+- **[Quick Start Guide](QUICKSTART.md)** - Get up and running in 5 minutes
+- **[Google Drive Automation](GOOGLE_DRIVE_AUTOMATION.md)** - Complete automation setup
+- **[Notion Integration](NOTION_AUTOMATION.md)** - Notion database configuration
 
